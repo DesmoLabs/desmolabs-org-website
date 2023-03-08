@@ -227,9 +227,9 @@
         </div>
     </div>
     <div class="relative w-full">
-        <div class="DocSearch-Magnifier absolute left-1/2 w-16 h-16 flex flex-none scale-125"
-            onclick="DocSearch.Prompt()">
-            <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
+        <div class="DocSearch-Magnifier absolute left-1/2 -top-1 flex flex-none scale-125 cursor-pointer"
+            onclick="DocSearch.Prompt()" id="DocSearch-Magnifier">
+            <svg width="28" height="28" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
                 <path
                     d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
                     stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
@@ -409,11 +409,11 @@
         <div class="text-center text-white font-extralight text-xs mt-20">©Desmo Labs 2022 All Rights Reserved</div>
     </div>
     <div
-        class="DocSearch DocSearch-Container fixed top-0 bottom-0 left-0 right-0 z-[200] h-screen w-screen p-24 bg-black/50 backdrop-blur-sm cursor-auto hidden">
-        <div class="DocSearch-Modal mx-auto bg-slate-900 text-slate-100 font-light rounded-lg lg:max-w-4xl"
-            style="background: #1e293b;">
-            <header class="DocSearch-SearchBar relative px-5 flex items-center border-b">
-                <form class="DocSearch-Form relative w-full flex items-center" style="flex: 1 1 auto;">
+        class="DocSearch DocSearch-Container fixed top-0 bottom-0 left-0 right-0 z-[200] h-screen w-screen pt-24 md:px-24 bg-black/50 backdrop-blur-sm cursor-auto hidden">
+        <div class="DocSearch-Modal mx-auto text-slate-100 font-light lg:max-w-4xl rounded-lg overflow-hidden">
+            <header class="DocSearch-SearchBar relative px-5 flex items-center" id="DocSearch_SearchBar"
+                style="background: #1e293b;">
+                <div class="DocSearch-Form relative w-full flex items-center" style="flex: 1 1 auto;">
                     <label class="DocSearch-MagnifierLabel w-6 h-6 flex flex-none scale-125" for="docsearch-input"
                         id="docsearch-label">
                         <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
@@ -441,7 +441,7 @@
                         autocomplete="off" autocorrect="off" autocapitalize="none" enterkeyhint="go" spellcheck="false"
                         placeholder="Search documentation" maxlength="64" type="search" value=""
                         aria-activedescendant="docsearch-item-0" aria-controls="docsearch-list">
-                </form>
+                </div>
                 <button class="DocSearch-Cancel" type="reset" aria-label="Cancel" onclick="DocSearch.Cancel()">
                     <svg width="20" height="20" viewBox="0 0 20 20">
                         <path d="M10 10l5.09-5.09L10 10l5.09 5.09L10 10zm0 0L4.91 4.91 10 10l-5.09 5.09L10 10z"
@@ -450,66 +450,20 @@
                     </svg>
                 </button>
             </header>
-            <div class="DocSearch-Dropdown">
-                <div class="DocSearch-Dropdown-Container">
+            <div class="DocSearch-Dropdown max-h-[66vh] overflow-scroll">
+                <div class="DocSearch-Dropdown-Container rounded-b-lg" style="background: #1e293b;">
                     <section class="DocSearch-Hits">
                         <ul role="listbox" aria-labelledby="docsearch-label" id="docsearch-list">
-                            <li class="DocSearch-Hit DocSearch-Hit--Child" id="docsearch-item-0" role="option"
-                                aria-selected="true"><a class=""
-                                    href="/docs/background-color#setting-the-background-color">
-                                    <div class="DocSearch-Hit-Container">
-                                        <div class="DocSearch-Hit-icon"><svg width="20" height="20" viewBox="0 0 20 20">
-                                                <g stroke="currentColor" fill="none" fill-rule="evenodd"
-                                                    stroke-linecap="round" stroke-linejoin="round">
-                                                    <path
-                                                        d="M3.18 6.6a8.23 8.23 0 1112.93 9.94h0a8.23 8.23 0 01-11.63 0">
-                                                    </path>
-                                                    <path d="M6.44 7.25H2.55V3.36M10.45 6v5.6M10.45 11.6L13 13"></path>
-                                                </g>
-                                            </svg></div>
-                                        <div class="DocSearch-Hit-content-wrapper"><span
-                                                class="DocSearch-Hit-title">​Setting the background color</span><span
-                                                class="DocSearch-Hit-path">Background Color</span></div>
-                                        <div class="DocSearch-Hit-action"><button class="DocSearch-Hit-action-button"
-                                                title="Save this search" type="submit"><svg width="20" height="20"
-                                                    viewBox="0 0 20 20">
-                                                    <path
-                                                        d="M10 14.2L5 17l1-5.6-4-4 5.5-.7 2.5-5 2.5 5 5.6.8-4 4 .9 5.5z"
-                                                        stroke="currentColor" fill="none" fill-rule="evenodd"
-                                                        stroke-linejoin="round"></path>
-                                                </svg></button></div>
-                                        <div class="DocSearch-Hit-action"><button class="DocSearch-Hit-action-button"
-                                                title="Remove this search from history" type="submit"><svg width="20"
-                                                    height="20" viewBox="0 0 20 20">
-                                                    <path
-                                                        d="M10 10l5.09-5.09L10 10l5.09 5.09L10 10zm0 0L4.91 4.91 10 10l-5.09 5.09L10 10z"
-                                                        stroke="currentColor" fill="none" fill-rule="evenodd"
-                                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                                </svg></button></div>
-                                    </div>
-                                </a></li>
-                            <li class="DocSearch-Hit DocSearch-Hit--Child" id="docsearch-item-1" role="option"
-                                aria-selected="false">
+                            <!-- <li class="DocSearch-Hit DocSearch-Hit--Child" id="docsearch-item-1">
                                 <a class="" href="/docs/z-index#setting-the-z-index">
                                     <div class="DocSearch-Hit-Container">
-                                        <div class="DocSearch-Hit-icon">
-                                            <svg width="20" height="20" viewBox="0 0 20 20">
-                                                <g stroke="currentColor" fill="none" fill-rule="evenodd"
-                                                    stroke-linecap="round" stroke-linejoin="round">
-                                                    <path
-                                                        d="M3.18 6.6a8.23 8.23 0 1112.93 9.94h0a8.23 8.23 0 01-11.63 0">
-                                                    </path>
-                                                    <path d="M6.44 7.25H2.55V3.36M10.45 6v5.6M10.45 11.6L13 13"></path>
-                                                </g>
-                                            </svg>
-                                        </div>
                                         <div class="DocSearch-Hit-content-wrapper">
                                             <span class="DocSearch-Hit-title">​Setting the z-index</span>
                                             <span class="DocSearch-Hit-path">Z-Index</span>
                                         </div>
                                     </div>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </section>
                 </div>
@@ -683,7 +637,7 @@
         }];
         const titleMaxLength = 84;
         const authorMaxLength = 16;
-        var tpl = `<div class="max-w-xl md:max-w-2xl w-full mx-auto md:mb-4 bg-white rounded-xl shadow-md overflow-hidden lg:h-64 xl:h-56 2xl:h-72 cursor-pointer transition duration-150 ease-out hover:ease-in hover:outline outline-1 outline-blue-500 hover:scale-[100.5%]">
+        var tpl = `<div class="max-w-xl md:max-w-2xl w-full mx-auto md:mb-4 bg-neutral-900 rounded-xl shadow-sm shadow-gray-500/50 overflow-hidden lg:h-64 xl:h-56 2xl:h-72 cursor-pointer transition duration-150 ease-out hover:ease-in hover:outline outline-1 outline-blue-500 hover:scale-[100.5%]">
                 <div class="sm:flex">
                     <div class="h-48 sm:max-lg:h-56 shrink-0">
                         <div class="h-full w-full sm:w-48 sm:h-72 xl:h-56 2xl:h-72 shrink-0 overflow-hidden">
@@ -691,14 +645,13 @@
                         </div>
                     </div>
                     <div class="p-8">
-                        <div class="block mt-1 flex items-center justify-start">
-                            <img alt="" class="press-icon inline-flex mr-3" src=""
-                                style="width: 32px; height: 32px; border-radius: 4px;">
-                            <div class="press-author inline-flex text-lg text-slate-500 uppercase">
+                        <div class="block flex items-center justify-start relative -top-2">
+                            <img alt="" class="press-icon inline-flex mr-3 bg-white w-8 h-8 rounded outline outline-offset-1 outline-1 outline-stone-200" src="">
+                            <div class="press-author inline-flex text-lg text-slate-300 uppercase">
                                 Forbes France
                             </div>
                         </div>
-                        <p class="press-title mt-2 text-2xl leading-tight font-medium text-black">
+                        <p class="press-title mt-2 text-2xl leading-tight font-medium text-white">
                             DeBond Protocol aux avant-postes de la révolution Web3.0 - Forbes France
                         </p>
                     </div>
@@ -710,7 +663,7 @@
                 if (pressItem.title && pressItem.target) {
                     const wrapper = document.createElement("div");
                     wrapper.innerHTML = tpl;
-                    const element = wrapper.firstChild;
+                    const element = wrapper.firstElementChild;
                     if (pressItem.author.length > authorMaxLength) {
                         pressItem.author = pressItem.author.substr(0, authorMaxLength) + " ...";
                     }
@@ -738,15 +691,154 @@
     <script>
         const DocSearch = new (class {
             constructor(document) {
+                this.tpl = `<li class="DocSearch-Hit DocSearch-Hit--Child" id="">
+                    <a class="block relative border-gray-500 mx-4 px-6 py-4 text-sm text-slate-400" href="" target="_blank">
+                        <div class="DocSearch-Hit-Container flex items-center">
+                            <div class="DocSearch-Hit-icon w-6 h-6 mr-4 rounded-md overflow-hidden outline outline-1 outline-stone-200 shrink-0">
+                                <img src="" alt="" class="w-full h-full shrink-0 bg-white">
+                            </div>
+                            <div class="DocSearch-Hit-content-wrapper w-full text-ellipsis overflow-hidden flex justify-between">
+                                <span class="DocSearch-Hit-title whitespace-nowrap text-ellipsis overflow-hidden"></span>
+                                <span class="DocSearch-Hit-path whitespace-nowrap text-ellipsis overflow-hidden"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>`;
+                this.noResultTemplate = `<li class="DocSearch-Hit DocSearch-Hit--Child" id="">
+                    <div class="block relative border-gray-500 mx-4 px-6 py-4 text-sm text-slate-400">
+                        <div class="DocSearch-Hit-Container flex items-center">
+                            <div class="DocSearch-Hit-content-wrapper">
+                                <span class="DocSearch-Hit-title">no result found</span>
+                                <span class="DocSearch-Hit-path"></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>`;
                 this.document = document;
+                this.searchBar = document.getElementById("DocSearch_SearchBar");
+                this.input = document.getElementById("docsearch-input");
+                this.resultList = document.getElementById("docsearch-list");
+                document.addEventListener("keydown", (event) => {
+                    const key = event.key; // Or const {key} = event; in ES6+
+                    if (key === "Escape") {
+                        this.Cancel();
+                    }
+                });
+                this.input.addEventListener("keypress", (event) => {
+                    if (event.key === 'Enter') {
+                        this.Search();
+                    }
+                });
+                this.input.addEventListener("input", (event) => {
+                    this.Search();
+                });
+            }
+            Search() {
+                function createHighlightString(line, keyword, markBegin, markEnd) {
+                    keyword = keyword.toLowerCase();
+                    let highlighted = "";
+                    let position = line.toLowerCase().indexOf(keyword);
+                    if (position >= 0) {
+                        highlighted = line.substr(0, position) + markBegin + line.substr(position, keyword.length) + markEnd + line.substr(position + keyword.length);
+                    } else {
+                        highlighted = line;
+                    }
+                    return highlighted;
+                }
+                const append = (fragment, keyword, pressItem, count, isLowerCased, whereMatched) => {
+                    const markBegin = "<mark class='font-light bg-blue-900/[.3] text-white border-x border-transparent rounded-sm'>";
+                    const markEnd = "</mark>";
+                    const wrapper = document.createElement("div");
+                    wrapper.innerHTML = this.tpl;
+                    const hit = wrapper.firstElementChild;
+                    if (count > 0) {
+                        hit.firstElementChild.classList.add("border-t");
+                    }
+                    hit.setAttribute("id", "docsearch-item-" + count);
+                    hit.getElementsByClassName("DocSearch-Hit-icon").item(0).firstElementChild
+                        .setAttribute("src", pressItem.icon);
+                    hit.firstElementChild.setAttribute("href", pressItem.target);
+                    let title = "";
+                    if (isLowerCased) {
+                        title = createHighlightString(pressItem.title, keyword, markBegin, markEnd);
+                    } else {
+                        title = pressItem.title.replaceAll(keyword, markBegin + keyword + markEnd);
+                    }
+                    hit.getElementsByClassName("DocSearch-Hit-title").item(0).innerHTML = title;
+                    if (whereMatched == "author") {
+                        let author = "";
+                        if (isLowerCased) {
+                            author = createHighlightString(pressItem.author, keyword, markBegin, markEnd);
+                        } else {
+                            author = pressItem.author.replaceAll(keyword, markBegin + keyword + markEnd);
+                        }
+                        hit.getElementsByClassName("DocSearch-Hit-path").item(0).innerHTML = author;
+                    } else {
+                        hit.getElementsByClassName("DocSearch-Hit-path").item(0).innerHTML = pressItem.author;
+                    }
+                    fragment.appendChild(hit);
+                }
+                const search = (keyword, pressItems, count) => {
+                    const fragment = this.document.createDocumentFragment();
+                    pressItems.forEach(pressItem => {
+                        if (pressItem.title && pressItem.target) {
+                            if (pressItem.title.includes(keyword)) {
+                                append(fragment, keyword, pressItem, count, false, "title");
+                                count++;
+                            } else if (pressItem.title.toLowerCase().includes(keyword)) {
+                                append(fragment, keyword, pressItem, count, true, "title");
+                                count++;
+                            } else if (pressItem.author.includes(keyword)) {
+                                append(fragment, keyword, pressItem, count, false, "author");
+                                count++;
+                            } else if (pressItem.author.toLowerCase().includes(keyword)) {
+                                append(fragment, keyword, pressItem, count, true, "author");
+                                count++;
+                            }
+                        }
+                    });
+                    return fragment;
+                }
+                const SearchNoResult = (resultList) => {
+                    const wrapper = document.createElement("div");
+                    wrapper.innerHTML = this.noResultTemplate;
+                    const element = wrapper.firstElementChild;
+                    resultList.replaceChildren(element);
+                }
+                const keyword = this.input.value.toLowerCase();
+                if (keyword) {
+                    this.searchBar.classList.add("border-b");
+                    let count = 0;
+                    let fragment = search(keyword, pressItemsEng, count);
+                    count = fragment.children.length;
+                    let fragment2 = search(keyword, pressItemsChn, count);
+                    count += fragment2.children.length;
+                    if (count) {
+                        fragment.appendChild(fragment2);
+                        fragment.lastElementChild.classList.add("mb-4");
+                        this.resultList.replaceChildren(fragment);
+                    } else {
+                        SearchNoResult(this.resultList);
+                    }
+                } else {
+                    SearchNoResult(this.resultList);
+                }
             }
             Prompt() {
-                document.getElementsByClassName("DocSearch").item(0).classList.remove("hidden");
                 document.body.classList.add("overflow-hidden");
+                document.getElementById("DocSearch-Magnifier").classList.add("hidden");
+                document.getElementsByClassName("DocSearch").item(0).classList.remove("hidden");
+                this.searchBar.classList.remove("border-b");
+                this.resultList.replaceChildren();// remove children
+                this.input.focus();
+                if (this.input.value) {
+                    this.Search();
+                }
             }
             Cancel() {
                 document.getElementsByClassName("DocSearch").item(0).classList.add("hidden");
                 document.body.classList.remove("overflow-hidden");
+                document.getElementById("DocSearch-Magnifier").classList.remove("hidden");
             }
         })(document);
     </script>
