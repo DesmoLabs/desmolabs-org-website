@@ -196,6 +196,26 @@
             <a href="#contact" @click="open = false;"><div class="px-4 mt-8 py-1 text-white text-base text-center border border-white rounded">Contact us</div></a>
         </div>
     </div>
+    <div id="cookies-notice" x-data="{ open: true }" x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
+        <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
+            <div class="flex flex-row items-center justify-between mx-4">
+                <div class="flex flex-col">
+                    <p>
+                        <strong>Notice.</strong>
+                        We uses cookies to provide necessary website functionality, improve your experience
+                        and analyze our traffic. By using our website, you agree to our legal policies:
+                        <a href="./legal/privacy-policy.html?from=team.html" title="Privacy Policy">Privacy Policy</a>,
+                        <a href="./legal/cookies-policy.html?from=team.html" title="Cookies Policy">Cookies Policy</a>
+                    </p>
+                </div>
+                <div class="flex flex-col">
+                    <span class="cursor-pointer" id="cookie-notice-close" @click="open = false" onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
+                        <span class="text-white border border-white rounded px-6 sm:px-8 py-4 sm:py-2 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">OK</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="bg-cover bg-top" style="background-image: url('./team/images/bg.png');">
         <div class="lg:max-w-screen-lg mx-auto py-16 lg:pt-28 lg:pb-48">
             <div class="lg:w-3/4 mx-8 lg:mx-0">
