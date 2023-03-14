@@ -208,9 +208,17 @@
                         <a href="./legal/cookies-policy.html?from=team.html" title="Cookies Policy">Cookies Policy</a>
                     </p>
                 </div>
-                <div class="flex flex-col">
-                    <span class="cursor-pointer" id="cookie-notice-close" @click="open = false" onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
-                        <span class="text-white border border-white rounded px-6 sm:px-8 py-4 sm:py-2 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">OK</span>
+                <div class="flex flex-col items-center justify-between">
+                    <span class="cursor-pointer flex" id="cookie-notice-accept" @click="open = false" onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
+                        <span class="text-white border border-black rounded px-5 py-2 md:py-1 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">Accept</span>
+                    </span>
+                    <span class="cursor-pointer flex mt-2 md:hidden" id="cookie-notice-decline-sm" @click="open = false" onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                        <span class="text-white border border-black rounded px-4 py-2 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                    </span>
+                </div>
+                <div class="flex flex-col hidden md:flex">
+                    <span class="cursor-pointer flex ml-2" id="cookie-notice-decline" @click="open = false" onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                        <span class="text-white border border-black rounded px-4 py-1 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
                     </span>
                 </div>
             </div>

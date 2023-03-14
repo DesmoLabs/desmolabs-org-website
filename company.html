@@ -250,7 +250,8 @@
             <!-- <a href="#contact" @click="open = false;"><div class="px-4 mt-8 py-1 text-white text-base text-center border border-white rounded">Contact us</div></a> -->
         </div>
     </div>
-    <div id="cookies-notice" x-data="{ open: true }" x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
+    <div id="cookies-notice" x-data="{ open: true }"
+        x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
         <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
             <div class="flex flex-row items-center justify-between mx-4">
                 <div class="flex flex-col">
@@ -258,13 +259,29 @@
                         <strong>Notice.</strong>
                         We uses cookies to provide necessary website functionality, improve your experience
                         and analyze our traffic. By using our website, you agree to our legal policies:
-                        <a href="./legal/privacy-policy.html?from=company.html" title="Privacy Policy">Privacy Policy</a>,
-                        <a href="./legal/cookies-policy.html?from=company.html" title="Cookies Policy">Cookies Policy</a>
+                        <a href="./legal/privacy-policy.html?from=company.html" title="Privacy Policy">Privacy
+                            Policy</a>,
+                        <a href="./legal/cookies-policy.html?from=company.html" title="Cookies Policy">Cookies
+                            Policy</a>
                     </p>
                 </div>
-                <div class="flex flex-col">
-                    <span class="cursor-pointer" id="cookie-notice-close" @click="open = false" onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
-                        <span class="text-white border border-white rounded px-6 sm:px-8 py-4 sm:py-2 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">OK</span>
+                <div class="flex flex-col items-center justify-between">
+                    <span class="cursor-pointer flex" id="cookie-notice-accept" @click="open = false"
+                        onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
+                        <span
+                            class="text-white border border-black rounded px-5 py-2 md:py-1 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">Accept</span>
+                    </span>
+                    <span class="cursor-pointer flex mt-2 md:hidden" id="cookie-notice-decline-sm" @click="open = false"
+                        onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                        <span
+                            class="text-white border border-black rounded px-4 py-2 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                    </span>
+                </div>
+                <div class="flex flex-col hidden md:flex">
+                    <span class="cursor-pointer flex ml-2" id="cookie-notice-decline" @click="open = false"
+                        onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                        <span
+                            class="text-white border border-black rounded px-4 py-1 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
                     </span>
                 </div>
             </div>
@@ -328,7 +345,6 @@
                     <div class="text-base lg:text-sm font-extralight">
                         <div class="mb-1"><a href="https://source.id" target="_blank">Source.ID</a></div>
                         <div class="mb-1"><a href="https://debond.org" target="_blank">Debond</a></div>
-
                     </div>
                 </div>
                 <div class="">
@@ -336,17 +352,18 @@
                     <div class="text-base lg:text-sm font-extralight">
                         <div class="mb-1"><a href="https://desmolabs.org/company.html">Who we are</a></div>
                         <div class="mb-1"><a href="https://desmolabs.org/company.html">About D/Labs</a></div>
-
                     </div>
                 </div>
                 <div class="">
                     <div class="font-bold mb-5 ">Developers</div>
                     <div class="text-base lg:text-sm font-extralight">
-                        <div class="mb-1"><a href="https://desmolabs.org/developers.html#communities">Communities</a>
+                        <div class="mb-1">
+                            <a href="https://desmolabs.org/developers.html#communities">Communities</a>
                         </div>
-                        <div><a href="https://desmolabs.gitbook.io/desmo-labs-documentation/desmo-labs-documentation/docs-navigation"
-                                target="_blank">Documentation</a></div>
-
+                        <div>
+                            <a href="https://desmolabs.gitbook.io/desmo-labs-documentation/desmo-labs-documentation/docs-navigation"
+                                target="_blank">Documentation</a>
+                        </div>
                     </div>
                 </div>
                 <div class="">
@@ -354,8 +371,6 @@
                     <div class="text-base lg:text-sm font-extralight">
                         <div class="mb-1"><a href="https://desmolabs.org/team.html#vision">Our Vision</a></div>
                         <div class="mb-1"><a href="https://desmolabs.org/team.html">Our Team</a></div>
-
-
                     </div>
                 </div>
             </div>
