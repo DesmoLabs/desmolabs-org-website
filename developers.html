@@ -24,16 +24,21 @@
                 <a href="./index.html"><img class="h-6 lg:h-10" src="./desmolabs/images/Logo.svg" /></a>
                 <a href="./index.html"><div class="font-black text-xl lg:text-3xl text-white ml-3">DESMO LABS</div></a>
             </div>
-            <a href="#solution"><div class="hidden lg:flex flex-row items-center">
+            <div class="hidden lg:flex flex-row items-center">
+                <!-- <a href="#solution"><div class="text-gray-300 mr-6">Products</div></a> -->
                 <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
-                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true"><a href="./index.html#solution">Solutions</a></div>
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">
+                        <a href="#solution">Solutions</a>
+                    </div>
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
-                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://source.id/">Source.ID <span x-show="arrow">↗</span></a></li>
-                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://debond.org/">Debond <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://source.id/" target="_blank">Source.ID <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://debond.org/" target="_blank">D/Bond <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./dwallet.html" target="_blank">D/Wallet <span x-show="arrow">↗</span></a></li>
+                        
                         </ul>
                     </div>
-                </div></a>
+                </div>
                 <!-- <a href="./company.html"><div class="group flex flex-col items-center mr-6">
                     <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">Company</div>
                 </div></a> -->
@@ -47,12 +52,21 @@
                         </ul>
                     </div>
                 </div>
-                <a href="./developers.html"><div class="group flex flex-col items-center mr-6">
-                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">Developers</div>
-                </div></a>
-                <a href="./team.html"><div class="group flex flex-col items-center mr-6">
-                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">Team</div>
-                </div></a>
+                <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">
+                        <a href="./developers.html">Developers</a>
+                    </div>
+                    <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
+                        <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://docs.desmolabs.org">Documentation <span x-show="arrow">↗</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group flex flex-col items-center mr-6">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">
+                        <a href="./team.html" target="_blank">Team</a>
+                    </div>
+                </div>
                 <!-- <a href="./company.html"><div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
                     <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">Company</div>
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
@@ -86,9 +100,9 @@
                         </ul>
                     </div>
                 </div></a> -->
-                <a href="https://calendly.com/yu-debond/60min"><div class="my-3 px-4 py-1 text-white border border-white rounded hover:bg-blue-500 hover:border-blue-500">Contact us</div></a>
-                <!-- <a href="#contact"><div class="px-4 py-1 text-white border border-white rounded">Contact us</div></a> -->
+                <div class="my-3 px-4 py-1 text-white border border-white rounded hover:bg-blue-500 hover:border-blue-500"><a href="https://app.debond.org" target="_blank">Launch APP</a></div>
                 <!-- <a href="#contact"><div class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Contact us</div></a> -->
+
             </div>
             <div class="lg:hidden">
                 <svg class="" x-show="! open" @click="open = true" width="26" height="26" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.94971 11.9497H39.9497" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.94971 23.9497H39.9497" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.94971 35.9497H39.9497" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -200,9 +214,46 @@
                 </div>
             </div> -->
             
-            <a href="https://calendly.com/yu-debond/60min" @click="open = false;"><div class="px-4 mt-8 py-1 text-white text-base text-center border border-white rounded">Contact us</div></a>
+            <a href="https://app.debond.org" @click="open = false;"><div class="px-4 mt-8 py-1 text-white text-base text-center border border-white rounded">Launch App</div></a>
         </div>
     </div>
+    <div id="cookies-notice" x-data="{ open: true }"
+    x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
+    <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
+        <div class="flex flex-row items-center justify-between mx-4">
+            <div class="flex flex-col">
+                <p>
+                    <strong>Notice.</strong>
+                    We uses cookies to provide necessary website functionality, improve your experience
+                    and analyze our traffic. By using our website, you agree to our legal policies:
+                    <a href="./legal/privacy-policy.html?from=company.html" title="Privacy Policy">Privacy
+                        Policy</a>,
+                    <a href="./legal/cookies-policy.html?from=company.html" title="Cookies Policy">Cookies
+                        Policy</a>
+                </p>
+            </div>
+            <div class="flex flex-col items-center justify-between">
+                <span class="cursor-pointer flex" id="cookie-notice-accept" @click="open = false"
+                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
+                    <span
+                        class="text-white border border-black rounded px-5 py-2 md:py-1 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">Accept</span>
+                </span>
+                <span class="cursor-pointer flex mt-2 md:hidden" id="cookie-notice-decline-sm" @click="open = false"
+                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                    <span
+                        class="text-white border border-black rounded px-4 py-2 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                </span>
+            </div>
+            <div class="flex flex-col hidden md:flex">
+                <span class="cursor-pointer flex ml-2" id="cookie-notice-decline" @click="open = false"
+                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                    <span
+                        class="text-white border border-black rounded px-4 py-1 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="lg:hidden w-full p-8 pb-16 flex-col items-center text-lg absolute z-10 bg-black" x-show="open" @click="open = false">
         <a href="#solution"><div class="text-gray-300 mb-4">Solutions</div></a>
         <a href="#company"><div class="text-gray-300 mb-4">Company</div></a>

@@ -8,44 +8,67 @@
     <title>D/BOND</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
-    <script>tailwind.colors.blue[20] = '#403af4';</script>
+    <script>tailwind.colors.blue[20] = '#403af4';
+    tailwind.colors.black = '#121212';
+            tailwind.colors.blue[60] = '#403AF4'; //debond blue
+        tailwind.colors.blue[61] = '#4A86E8'; //debond blue
+        tailwind.colors.blue[62] = '#FF7A00'; //debond blue
+        tailwind.colors.blue[63] = '#403AF4'; //debond blue
+        tailwind.colors.blue[64] = '#1c1b4a'; //debond blue
+        tailwind.colors.blue[200] = '#ffffff'; //debond blue
+        tailwind.colors.blue[201] = '#09082d'; //debond blue
+        
+        </script>
+
 </head>
 <body class="bg-black" x-data="{ open: false }">
     <div class="sticky lg:relative top-0 left-0 bg-black z-20">
         <header class="py-6 lg:py-6 flex flex-row items-center justify-between lg:max-w-screen-lg mx-8 lg:mx-auto">
             <img class="h-10 lg:h-10" src="./debond/images/logo.svg" />
             <div class="hidden lg:flex flex-row items-center">
+                <!-- <a href="#solution"><div class="text-gray-300 mr-6">Products</div></a> -->
                 <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
-                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true"><a href="./index.html#solution">Solutions</a></div>
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">
+                        <a href="#solution">Solutions</a>
+                    </div>
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
-                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://source.id/">Source.ID <span x-show="arrow">↗</span></a></li>
-                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://debond.org/">Debond <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://source.id/" target="_blank">Source.ID <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://debond.org/" target="_blank">D/Bond <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./dwallet.html" target="_blank">D/Wallet <span x-show="arrow">↗</span></a></li>
+                        
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="group flex flex-col items-center mr-6">
-                    <a href="https://desmolabs.org/company.html"><div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">Company</div></a>
-                </div> -->
+                <!-- <a href="./company.html"><div class="group flex flex-col items-center mr-6">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">Company</div>
+                </div></a> -->
                 <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
                     <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">
                         <a href="./company.html">Company</a>
                     </div>
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
-                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false">
-                                <a href="./press.html">Press <span x-show="arrow">↗</span></a>
-                            </li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">
+                        <a href="./developers.html">Developers</a>
+                    </div>
+                    <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
+                        <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://docs.desmolabs.org">Documentation <span x-show="arrow">↗</span></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="group flex flex-col items-center mr-6">
-                    <a href="https://desmolabs.org/developers.html"><div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">Developers</div></a>
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">
+                        <a href="./team.html" target="_blank">Team</a>
+                    </div>
                 </div>
-                <div class="group flex flex-col items-center mr-6">
-                    <a href="https://desmolabs.org/team.html"><div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">Team</div></a>
-                </div>
-                <!-- <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                <!-- <a href="./company.html"><div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
                     <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">Company</div>
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
@@ -55,8 +78,8 @@
                             <li class="py-3"><a href="#">Press</a></li>
                         </ul>
                     </div>
-                </div>
-                <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                </div></a>
+                <a href="./developers.html"><div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
                     <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">Developers</div>
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
@@ -66,8 +89,8 @@
                             <li class="py-3"><a href="#">Cases Study</a></li>
                         </ul>
                     </div>
-                </div>
-                <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                </div></a>
+                <a href="./team.html"><div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
                     <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">Team</div>
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
@@ -77,9 +100,10 @@
                             <li class="py-3"><a href="#">Join Us</a></li>
                         </ul>
                     </div>
-                </div> -->
-                <a href="https://calendly.com/yu-debond/60min"><div class="px-4 py-1 text-white border border-white rounded hover:bg-blue-20 hover:border-blue-20">Contact us</div></a>
-                <!-- <a href="https://calendly.com/yu-debond/60min"><div class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Contact us</div></a> -->
+                </div></a> -->
+                <div class="my-3 px-4 py-1 text-white border border-white rounded hover:bg-blue-500 hover:border-blue-500"><a href="https://app.debond.org" target="_blank">Launch APP</a></div>
+                <!-- <a href="#contact"><div class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Contact us</div></a> -->
+
             </div>
             <div class="lg:hidden">
                 <svg class="" x-show="! open" @click="open = true" width="26" height="26" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.94971 11.9497H39.9497" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.94971 23.9497H39.9497" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.94971 35.9497H39.9497" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -192,19 +216,55 @@
                     </ul>
                 </div>
             </div> -->
-            <a href="#contact" @click="open = false;"><div class="px-4 mt-8 py-1 text-white text-base text-center border border-white rounded">Contact us</div></a>
+            <a href="https://app.debond.org" @click="open = false;"><div class="px-4 mt-8 py-1 text-white text-base text-center border border-white rounded">Launch App</div></a>
         </div>
     </div>
+    <!-- cookies -->
+    <div id="cookies-notice" x-data="{ open: true }"
+    x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
+    <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
+        <div class="flex flex-row items-center justify-between mx-4">
+            <div class="flex flex-col">
+                <p>
+                    <strong>Notice.</strong>
+                    We uses cookies to provide necessary website functionality, improve your experience
+                    and analyze our traffic. By using our website, you agree to our legal policies:
+                    <a href="./legal/privacy-policy.html?from=company.html" title="Privacy Policy">Privacy
+                        Policy</a>,
+                    <a href="./legal/cookies-policy.html?from=company.html" title="Cookies Policy">Cookies
+                        Policy</a>
+                </p>
+            </div>
+            <div class="flex flex-col items-center justify-between">
+                <span class="cursor-pointer flex" id="cookie-notice-accept" @click="open = false"
+                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
+                    <span
+                        class="text-white border border-black rounded px-5 py-2 md:py-1 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">Accept</span>
+                </span>
+                <span class="cursor-pointer flex mt-2 md:hidden" id="cookie-notice-decline-sm" @click="open = false"
+                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                    <span
+                        class="text-white border border-black rounded px-4 py-2 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                </span>
+            </div>
+            <div class="flex flex-col hidden md:flex">
+                <span class="cursor-pointer flex ml-2" id="cookie-notice-decline" @click="open = false"
+                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                    <span
+                        class="text-white border border-black rounded px-4 py-1 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="h-screen lg:h-auto relative">
         <div class="lg:max-w-screen-lg lg:mx-auto flex flex-row items-center justify-between lg:mt-24">
             <div class="absolute lg:static left-8 bottom-48 lg:flex-1 lg:flex flex-col items-center lg:items-start lg:px-0 z-10">
                 <div class="mb-12 lg:mb-20 text-white text-4xl lg:text-7xl font-extrabold">
-                    Decentralized<br>
-                    Bonds<br>
-                    Solutions
+                    Distributed<br> Ledger<br> Technologies<br> as a Service
                 </div>
                 <a href="#solution">
-                    <span class="font-bold bg-blue-700 text-base lg:text-lg text-white px-8 py-3 lg:py-4 rounded text-center">EXPLORE OUR SOLUTIONS</span>
+                    <span class="font-bold bg-blue-60 text-base lg:text-lg text-white px-8 py-3 lg:py-4 rounded text-center">Book a consultation</span>
                 </a>
             </div>
             <div class="absolute lg:static right-8 top-32 lg:block lg:mr-10 z-0">
@@ -212,28 +272,27 @@
             </div>
         </div>
     </div>
+    
     <div class="lg:max-w-screen-lg mx-auto px-6 lg:px-0 my-16 lg:my-32">
         <div class="text-white text-2xl font-extrabold mb-8 text-center lg:text-left">Trusted by</div>
-        <div class="grid grid-cols-3 lg:grid-cols-7 gap-8 w-full">
-            <img class="h-7 mx-auto" src="./desmolabs/images/tb-eth.png" />
-            <img class="h-6 mx-auto" src="./desmolabs/images/tb-nasdaq.svg" />
+        <div class="grid grid-cols-3 lg:grid-cols-6 gap-8 w-full">
+            <img class="h-7 mx-auto" src="./desmolabs/images/tb-nasdaq.svg" />
             <img class="h-6 mx-auto" src="./desmolabs/images/tb-a55.png" />
-            <img class="h-6 mx-auto" src="./desmolabs/images/tb-cf.png" />
-            <img class="h-6 mx-auto" src="./desmolabs/images/tb-equisafe.png" />
-            <img class="h-6 mx-auto" src="./desmolabs/images/tb-pw.svg" />
             <img class="h-6 mx-auto" src="./desmolabs/images/tb-forbes.svg" />
+            <img class="h-6 mx-auto" src="./desmolabs/images/tb-pw.svg" />
+            <img class="h-6 mx-auto" src="./desmolabs/images/tb-pw.svg" />
+            <img class="h-6 mx-auto" src="./desmolabs/images/tb-pw.svg" />
         </div>
     </div>
     <div class="py-20 lg:py-44 bg-blue-700 relative overflow-hidden">
         <div class="lg:max-w-screen-lg mx-auto px-6 lg:px-0">
             <div class="lg:w-2/5 lg:bg-blue-700 z-10 sticky px-2">
                 <div class="text-white text-2xl lg:text-5xl font-extrabold leading-snug">
-                    ERC-3475<br>
-                    TOKEN<br>
-                    STANDARD
+                    OPTIMIZED<br>
+                    SUPPLY-CHAIN
                 </div>
                 <div class="text-white text-lg my-10 font-light">
-                    ERC-3475 D/Bond is a set of universal tokenization solutions and white-labeled securities marketplace.
+                    Our solution facilitates trusted data exchange and workflow automation across boundaries, utilizing distributed ledger technology and blockchain.
                 </div>
                 <a href="https://eips.ethereum.org/EIPS/eip-3475">
                     <div class="font-bold bg-black text-base lg:text-lg text-white px-8 py-3 lg:py-4 text-center">GO TO THE ERC DOCUMENTATION</div>
@@ -243,86 +302,162 @@
         <img class="absolute left-0 top-0 z-0" src="./debond/images/lt.svg" alt="">
         <img class="absolute right-0 bottom-0" src="./debond/images/rb.svg" alt="">
     </div>
+
+    
+    <div class="py-20 lg:py-24  lg:max-w-screen-lg lg:mx-auto text-white">
+       
+        <div class="flex flex-col lg:flex-row items-center justify-between lg:mb-40">
+            <div class="w-5/12 lg:w-1/3 mb-10 lg:mb-0">
+                <img src="./debond/1.png" alt="">
+            </div>
+            <div class="w-5/6 lg:w-1/2 flex flex-col items-center lg:items-start">
+                <div class="text-2xl lg:text-5xl">ESG EFFORTS</div>
+                <p class="mt-6 text-lg leading-8 pb-12 text-white">Reduce over 85% of ESG products' OTC trading costs, optimizes supply chains, and ensures tamper-proof carbon credit recording. Furthermore, by enabling self-sovereign identity, we aim to diminish social discrimination and attract private sector investments towards Sustainable Development Goals (SDG) initiatives.</p>
+                <!-- <ul class="mt-8 list-disc ml-6 mb-16">
+                    <li>Built-in AML and KYC solutions with standardized interfaces, allowing for open ledger identification verification.</li>
+                    <li class="my-8">Digital Signatures for universal authentication and provide tamper-proof with verifiable credentials.</li>
+                </ul> -->
+                <!-- <a href="#">
+                    <span class="px-10 py-3 rounded border-2 border-orange-500">TRY D/ID WALLET</span>
+                </a> -->
+            </div>
+        </div>
+
+        <div class="flex flex-col-reverse lg:flex-row items-center justify-between mb-24 lg:mb-60">
+            <div class="w-5/6 lg:w-1/2 flex flex-col items-center lg:items-start">
+                <div class="text-2xl lg:text-5xl">OTC <br> MARKETPLACE</div>
+                <div class="mt-8">Offers enhanced privacy and direct transactions between parties, eliminating the need for an intermediary. Additionally, it facilitates large trades without immediate impact on the market price, promoting more stable asset valuations.</div>
+            </div>
+            <div class="w-2/3 lg:w-2/5 mb-10 lg:mb-0">
+                <img src="./debond/2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-center justify-between lg:mb-40">
+            <div class="w-5/12 lg:w-1/3 mb-10 lg:mb-0">
+                <img src="./debond/3.png" alt="">
+            </div>
+            <div class="w-5/6 lg:w-1/2 flex flex-col items-center lg:items-start">
+                <div class="text-2xl lg:text-5xl">“INDEXED SWIFT SYSTEM”</div>
+                <p class="mt-6 text-lg leading-8 pb-12 text-white">The indexed nature of this system would enable quick and efficient data retrieval and auditing, significantly enhancing the overall efficiency and reliability of global financial operations.</p>
+                <!-- <ul class="mt-8 list-disc ml-6 mb-16">
+                    <li>Built-in AML and KYC solutions with standardized interfaces, allowing for open ledger identification verification.</li>
+                    <li class="my-8">Digital Signatures for universal authentication and provide tamper-proof with verifiable credentials.</li>
+                </ul> -->
+                <!-- <a href="#">
+                    <span class="px-10 py-3 rounded border-2 border-orange-500">TRY D/ID WALLET</span>
+                </a> -->
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-center justify-between ">
+            <div class="w-5/12 lg:w-1/3 mb-10 lg:mb-0">
+                <img src="./debond/4.png" alt="">
+            </div>
+            <div class="w-5/6 lg:w-1/2 flex flex-col items-center lg:items-start">
+                <div class="text-2xl lg:text-5xl">TAMPER PROOF</div>
+                <p class="mt-6 text-lg leading-8 pb-12 text-white">On-Chain Ownership and Origin Certificate for artworks and goods are digitally verified and immutable record stored on a blockchain that establishes and verifies the authenticity and origin of a specific object.</p>
+                <!-- <ul class="mt-8 list-disc ml-6 mb-16">
+                    <li>Built-in AML and KYC solutions with standardized interfaces, allowing for open ledger identification verification.</li>
+                    <li class="my-8">Digital Signatures for universal authentication and provide tamper-proof with verifiable credentials.</li>
+                </ul> -->
+                <!-- <a href="#">
+                    <span class="px-10 py-3 rounded border-2 border-orange-500">TRY D/ID WALLET</span>
+                </a> -->
+            </div>
+        </div>
+        
+    </div>
+
+
     <div>
         <div class="lg:max-w-screen-lg mx-auto py-12 lg:py-20 lg:pt-32">
             <div class="font-extrabold text-white text-2xl lg:text-6xl text-center lg:text-left">How it works</div>
-            <div class="mt-6 text-white font-bold text-xl lg:text-2xl text-center lg:text-left lg:mx-6 lg:mx-0 lg:mb-24">Our web3 solutions contain :</div>
+            <div class="mt-6 text-white font-bold text-xl lg:text-2xl text-center lg:text-left lg:mx-6 lg:mx-0 lg:mb-24">Our DLT solutions contain :</div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto lg:mx-0 w-2/3 lg:w-auto">
                 <div class="flex flex-col items-center">
                     <img class="" src="./debond/images/work-1.svg" alt="">
                     <div class="text-white mt-6 lg:mt-12">
-                        <div class="text-2xl font-bold mb-4 lg:mb-8">Securitising assets</div>
-                        <div class="text-base font-light">ERC-3475 is the only securities token standard, which allows on-chain metadata storage. </div>
+                        <div class="text-2xl font-bold mb-4 lg:mb-8">Scalable Automated Compliance</div>
+                        <div class="text-base font-light">Built-in, customizable KYC solutions for different regulations. Transform legal requirements into intelligent, self-executing code. </div>
                     </div>
                 </div>
                 <div class="flex flex-col items-center">
                     <img class="" src="./debond/images/work-2.svg" alt="">
                     <div class="text-white mt-6 lg:mt-12">
-                        <div class="text-2xl font-bold mb-4 lg:mb-8">Muti-layered pool</div>
-                        <div class="text-base font-light">Investors may choose from different corresponding tranches of the pool, based on their risk profiles. </div>
+                        <div class="text-2xl font-bold mb-4 lg:mb-8">Ensure the Authenticity of Data</div>
+                        <div class="text-base font-light">Refines shared procedures, boosts accountability, reduces disputes, and automates reconciliation tasks.</div>
                     </div>
                 </div>
                 <div class="flex flex-col items-center">
                     <img class="" src="./debond/images/work-3.svg" alt="">
                     <div class="text-white mt-6 lg:mt-12">
-                        <div class="text-2xl font-bold mb-4 lg:mb-8">Tokenization</div>
-                        <div class="text-base font-light">Allows exchanges and settlements of any futures, IPs, properties, or other real-world assets.</div>
+                        <div class="text-2xl font-bold mb-4 lg:mb-8">Instant & Free
+                            Settlement</div>
+                        <div class="text-base font-light">Eliminates friction and accelerates settlement, leading to improved efficiency and enhanced financial operations.</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="lg:max-w-screen-lg mx-auto py-12 lg:py-20 lg:pt-32 flex flex-col lg:flex-row items-end justify-between">
-        <div class="flex-1 lg:mr-20 w-2/3 lg:w-auto mx-auto">
-            <img class="" src="./debond/images/app.png" alt="">
-        </div>
-        <div class="mt-12 lg:mt-0 w-10/12 lg:w-5/12 mx-auto flex flex-col items-center lg:items-start">
-            <div class="font-extrabold text-white text-2xl lg:text-6xl text-center lg:text-left">WHITE-LABEL SOLUTIONS</div>
-            <div class="text-white text-base my-10">
-                Smart contracts provide an efficient & trustless system
-                <ul class="list-disc mt-4 ml-6">
-                    <li>Built-in on-chain KYC solutions manage individual & company KYC</li>
-                    <li>Provides primary & secondary on-chain markets for bonds & derivatives</li>
-                </ul>
+   
+    <div class="from-gray-800 to-black bg-gradient-to-b bg-center bg-no-repeat bg-cover" style="background-image:url('./debond/images/bg2.svg');">
+        
+        <div class="lg:max-w-screen-lg mx-auto py-12 lg:py-20 lg:pt-32 flex flex-col lg:flex-row items-end justify-between">
+            <div class="flex-1 lg:mr-20 w-2/3 lg:w-auto mx-auto">
+                <img class="" src="./debond/images/app.png" alt="">
             </div>
-            <a href="#">
-                <span class="bg-blue-700 text-white px-12 py-4 font-bold">SEE OUR WHITELABEL</span>
-            </a>
+            <div class="mt-12 lg:mt-0 w-10/12 lg:w-5/12 mx-auto flex flex-col items-center lg:items-start">
+                <div class="font-extrabold text-white text-2xl lg:text-6xl text-center lg:text-left">WHITE-LABEL SOLUTIONS</div>
+                <div class="text-white text-base my-10">
+                    We build the infrastructure allowing you to manage any asset or service
+                    <ul class="list-disc mt-4 ml-6">
+                        <li>Built-in on-chain KYC solutions manage individual & company KYC</li>
+                        <li>Facilitate consumers to find and purchases your asset or service.</li>
+                    </ul>
+                </div>
+                <a href="#">
+                    <span class="bg-blue-60 text-white px-12 py-4 font-bold">SEE OUR WHITELABEL</span>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="from-gray-800 to-black bg-gradient-to-b bg-center bg-no-repeat bg-cover" style="background-image: linear-gradient(180deg, #000 10.26%, rgba(0, 0, 0, 0) 85.66%, #000000 98.54%), url('./debond/images/bg-2.png');">
+        
+        
+        
         <div class="lg:max-w-screen-lg mx-auto py-12 lg:py-20 lg:pt-32 grid grid-cols-1 lg:grid-cols-3 lg:gap-8 text-white">
-            <div class="p-10 bg-black">
+            <div class="p-10 bg-blue-201 border border-white">
                 <div class="font-extrabold text-2xl lg:text-6xl">
                     1<span class="text-blue-700">.</span><br>
                     MARKET
                 </div>
-                <div class="my-8 lg:my-16 text-lg text-light lg:h-44">It is the marketplace where bonds and derivatives can be traded. It supports all auctions compatible with the ERC-3475 standard.</div>
+                <div class="my-8 lg:my-16 text-lg text-light lg:h-44">Provides fast, flexible, and affordable market place solutions for propriety and services </div>
                 <span class="text-white border border-white rounded px-8 py-2 text-lg text-center">Learn more</span>
             </div>
-            <div class="p-10 bg-black">
+            <div class="p-10 bg-blue-201 border border-white">
                 <div class="font-extrabold text-2xl lg:text-6xl">
                     2<span class="text-blue-700">.</span><br>
                     WALLET
                 </div>
-                <div class="my-8 lg:my-16 text-lg text-light lg:h-44">D/ Wallet can safe keep and display your Source.ID and D/ID SBT. It can manage all ERC-3475 assets with all their metadata.</div>
+                <div class="my-8 lg:my-16 text-lg text-light lg:h-44">User oriented, one-stop application for AI-based, Identity verification and asset management. </div>
                 <span class="text-white border border-white rounded px-8 py-2 text-lg text-center">Learn more</span>
             </div>
-            <div class="p-10 bg-black">
+            <div class="p-10 bg-blue-201 border border-white">
                 <div class="font-extrabold text-2xl lg:text-6xl">
                     3<span class="text-blue-700">.</span><br>
                     DEX
                 </div>
-                <div class="my-8 lg:my-16 text-lg text-light lg:h-44">A dedicated secondary ERC-3475 Dutch-auction marketplace can be used to replace inefficient OTC trading.</div>
+                <div class="my-8 lg:my-16 text-lg text-light lg:h-44">A dedicated secondary Dutch-auction marketplace, that can be used to replace inefficient OTC trading.</div>
                 <span class="text-white border border-white rounded px-8 py-2 text-lg text-center">Learn more</span>
             </div>
         </div>
-        <div class="lg:max-w-screen-lg mx-auto py-24 pt-8 lg:py-60 lg:pt-32 flex flex-col items-center">
-            <div class="text-center text-white text-bold font-bold text-2xl lg:text-4xl mb-10 lg:mb-20">Curious about Decentralized Tokenization?</div>
-            <a href="#">
-                <span class="bg-blue-700 text-white px-12 py-4 font-bold">SEE WHAT CAN BE TOKENIZED</span>
-            </a>
-        </div>
+      
+    </div>
+
+    <div class="lg:max-w-screen-lg mx-auto py-24 pt-8 lg:py-60 lg:pt-32 flex flex-col items-center">
+        <div class="text-center text-white text-bold font-bold text-2xl lg:text-4xl mb-10 lg:mb-20">Curious In knowing how we realized this?</div>
+        <a href="#">
+            <span class="bg-blue-60 text-white px-12 py-4 font-bold">GO TO THE ERC-3475 DOC</span>
+        </a>
     </div>
     <div id="contact" class="lg:max-w-screen-lg mx-auto py-8 lg:py-16">
         <div class="flex flex-col lg:flex-row items-center justify-between">
