@@ -58,7 +58,8 @@
                     </div>
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
-                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./team.html">Team <span x-show="arrow">↗</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -74,7 +75,7 @@
                 </div>
                 <div class="group flex flex-col items-center mr-6">
                     <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">
-                        <a href="./team.html" target="_blank">Team</a>
+                        <a href="./pricing.html" target="_blank">Pricing</a>
                     </div>
                 </div>
                 <!-- <a href="./company.html"><div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
@@ -265,14 +266,14 @@
         </div>
     </div>
 </div>
-    <div class="bg-center lg:py-24 bg-no-repeat bg-cover" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('./wall/1.png');">
+    <div class="bg-center lg:py-24 bg-no-repeat bg-cover" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./wall/1.png');">
         <div class="py-12 lg:py-24 lg:max-w-screen-lg mx-auto relative">
             <div class="px-6 lg:px-0 lg:w-1/2 flex flex-col items-center lg:items-start">
                 <div class="text-3xl lg:text-6xl text-white font-extrabold">USER-END COMPLIANT APPLICATION
 
                 </div>
-                <div class="text-white font-extralight my-10 text-lg">Manage your digital identity, personal data, and assets, benefitting from a streamlined experience</div>
-                <a href="#solution"><span class="font-bold bg-blue-60 text-base lg:text-lg text-white px-20 py-3 lg:py-4 rounded text-center">Join Whitelist</span></a>
+                <div class="text-white font-extralight my-10 text-lg">Manage your digital identity, verifiable credentials and digital assets, benefiting from a streamlined experience</div>
+                <a href="#solution"><span class="font-bold bg-blue-60 text-base lg:text-lg text-white px-20 py-3 lg:py-4 rounded text-center">DOWNLOAD</span></a>
                 <!-- <div style="display: flex;">
                     <a href="#solution"><img style="width: 4rem;margin-top:3rem;" src="./debond/goole.svg" alt=""></a>
                     <a href="#solution"><img style="width: 5rem;margin-top:3.4rem;margin-left:1rem;" src="./debond/logo.png" alt=""></a>
@@ -317,7 +318,7 @@
             <div class="w-5/6 lg:w-1/2 flex flex-col items-center lg:items-start">
                 <div class="text-2xl lg:text-5xl">VERIFIABLE
                     CREDENTIALS</div>
-                <p class="mt-6 text-lg leading-8 pb-12 text-white">Our blockchain-based platform securely manages infrastructure without exposing credential-generating data, limiting access to only permissioned participants, and ensuring all actions and business processes are tamperproof, permanently recorded as blockchain transactions.</p>
+                <p class="mt-6 text-lg leading-8 pb-12 text-white">Our blockchain-based platform securely manages infrastructure without exposing credential-generating data, allowing access only to permitted participants, and ensuring all actions and business processes are tamper-proof, permanently recorded as blockchain transactions.</p>
                 <!-- <ul class="mt-8 list-disc ml-6 mb-16">
                     <li>Built-in AML and KYC solutions with standardized interfaces, allowing for open ledger identification verification.</li>
                     <li class="my-8">Digital Signatures for universal authentication and provide tamper-proof with verifiable credentials.</li>
@@ -331,7 +332,7 @@
         <div class="flex flex-col-reverse lg:flex-row items-center justify-between mb-24 lg:mb-60">
             <div class="w-5/6 lg:w-1/2 flex flex-col items-center lg:items-start">
                 <div class="text-2xl lg:text-5xl">NO GAS FEE</div>
-                <div class="mt-8">Eliminating the often fluctuating and unpredictable fees associated with blockchain operations, making it ideal for massive adaptation. Additionally, it simplifies the user experience by removing the need to manage gas fees, enabling users to focus on their transactions and interactions with the blockchain ecosystem.</div>
+                <div class="mt-8">Eliminating the often fluctuating and unpredictable fees associated with blockchain operations, making it ideal for widespread adoption. Additionally, it simplifies the user experience by removing the need to manage gas fees, enabling users to focus on their transactions and interactions within the blockchain ecosystem.</div>
             </div>
             <div class="w-2/3 lg:w-2/5 mb-10 lg:mb-0">
                 <img src="./wall/3.png" alt="">
@@ -454,7 +455,10 @@
                 </div>
             </div>
         </div>
-        <div class="text-center text-white font-extralight text-xs mt-20">©Desmo Labs 2022 All Rights Reserved</div>
+        <div class="text-center text-white font-extralight text-xs mt-20 flex flex-col gap-2">
+            ©Desmo Labs 2023 All Rights Reserved
+            <a href="/legal/privacy-policy.html"><div class="underline">Privacy policies and terms</div></a>
+        </div>
     </div>
 </body>
 </html>

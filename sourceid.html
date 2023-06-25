@@ -41,7 +41,8 @@
                     </div>
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
-                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./team.html">Team <span x-show="arrow">↗</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -57,7 +58,7 @@
                 </div>
                 <div class="group flex flex-col items-center mr-6">
                     <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">
-                        <a href="./team.html" target="_blank">Team</a>
+                        <a href="./pricing.html" target="_blank">Pricing</a>
                     </div>
                 </div>
                 <!-- <a href="./company.html"><div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
@@ -261,7 +262,7 @@
                     Offering a secure, private, flexible, and auditable identity verification solutions
                 </div>
                 <a href="#solution">
-                    <span class="bg-black text-base lg:text-lg text-white px-8 py-3 lg:py-4 rounded text-center">EXPLORE OUR SOLUTIONS</span>
+                    <span class="bg-black text-base lg:text-lg text-white px-8 py-3 lg:py-4 rounded text-center">BOOK A CONSULTATION</span>
                 </a>
             </div>
             <div class="w-2/3 lg:w-2/5 p-5">
@@ -273,7 +274,7 @@
         <div class="text-2xl lg:text-5xl text-white mb-12 lg:mb-24">BUILD WITH US</div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div class="flex flex-col justify-between rounded border border-gray-500 p-6 lg:p-10">
-                <div class="mb-8">DID for Govermant</div>
+                <div class="mb-8">DID for Government</div>
                 <a href="https://desmolabs.gitbook.io/desmo-labs-documentation/our-solutions/2.-on-chain-verifiable-credentials/e-identity" target="_blank"><span class="px-8 py-2 rounded border border-gray-500 hover:border-orange-500 hover:bg-orang-500 hover:bg-orange-500">EBSI project</span></a>
             </div>
             <div class="flex flex-col justify-between rounded border border-gray-500 p-6 lg:p-10">
@@ -303,7 +304,7 @@
             </div>
             <div class="w-5/6 lg:w-1/2 flex flex-col items-center lg:items-start">
                 <div class="text-2xl lg:text-5xl">[D/Wallet]</div>
-                <p class="mt-6 text-lg leading-8 pb-12 text-white">Simpler user experience -digital signatures and tamper-proof can be operated with no seed phrase and gas fee.</p>
+                <p class="mt-6 text-lg leading-8 pb-12 text-white">Enhanced user experience - Digital signatures and tamper-proof can be operated with no seed phrases and gas fees.</p>
                 <ul class="mt-8 list-disc ml-6 mb-16">
                     <li>Built-in AML and KYC solutions with standardized interfaces, allowing for open ledger identification verification.</li>
                     <li class="my-8">Digital Signatures for universal authentication and provide tamper-proof with verifiable credentials.</li>
@@ -399,7 +400,10 @@
                 </div>
             </div>
         </div>
-        <div class="text-center text-white font-extralight text-xs mt-20">©Desmo Labs 2022 All Rights Reserved</div>
+        <div class="text-center text-white font-extralight text-xs mt-20 flex flex-col gap-2">
+            ©Desmo Labs 2023 All Rights Reserved
+            <a href="/legal/privacy-policy.html"><div class="underline">Privacy policies and terms</div></a>
+        </div>
     </div>
 </body>
 </html>

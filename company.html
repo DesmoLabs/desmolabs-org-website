@@ -47,7 +47,8 @@
                     </div>
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
-                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./team.html">Team <span x-show="arrow">↗</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -63,7 +64,7 @@
                 </div>
                 <div class="group flex flex-col items-center mr-6">
                     <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">
-                        <a href="./team.html" target="_blank">Team</a>
+                        <a href="./pricing.html" target="_blank">Pricing</a>
                     </div>
                 </div>
                 <!-- <a href="./company.html"><div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
@@ -352,7 +353,10 @@
                 </div>
             </div>
         </div>
-        <div class="text-center text-white font-extralight text-xs mt-20">©Desmo Labs 2022 All Rights Reserved</div>
+        <div class="text-center text-white font-extralight text-xs mt-20 flex flex-col gap-2">
+            ©Desmo Labs 2023 All Rights Reserved
+            <a href="/legal/privacy-policy.html"><div class="underline">Privacy policies and terms</div></a>
+        </div>
     </div>
 </body>
 </html>
