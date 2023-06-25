@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desmo Labs (D/Labs) is a Paris-based innovation technology company that specializes in decentralized bond (D/Bond) and decentralized identity (D/ID) projects. With our on-chain KYC (Know-Your-Customer) and KYD (Know-Your-Device) services, we provide E-identity and E-property registration, authentication of property rights, and verification of logins. In addition, our white-label platform enables anyone to tokenize any asset or service.">
+    <title>Pricing - Desmo labs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+    <script>
+        tailwind.colors.black = '#121212';
+        tailwind.colors.blue[25] = '#1B1D29';
+        tailwind.colors.blue[850] = '#1C147B';
+        tailwind.colors.blue[950] = '#15113F';
+        tailwind.defaultTheme.borderWidth[32] = '32px';
+    </script>
+</head>
+<body class="bg-black text-white" x-data="{ open: false }">
+    <div class="sticky lg:relative top-0 left-0 bg-black z-20">
+        <header class="py-6 lg:py-6 flex flex-row items-center justify-between lg:max-w-screen-lg mx-8 lg:mx-auto">
+            <div class="flex flex-row items-center">
+                <a href="./index.html"><img class="h-6 lg:h-10" src="./desmolabs/images/Logo.svg" /></a>
+                <a href="./index.html"><div class="font-black text-xl lg:text-3xl text-white ml-3">DESMO LABS</div></a>
+            </div>
+            <div class="hidden lg:flex flex-row items-center">
+                <!-- <a href="#solution"><div class="text-gray-300 mr-6">Products</div></a> -->
+                <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">
+                        <a href="#solution">Solutions</a>
+                    </div>
+                    <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
+                        <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://source.id/" target="_blank">Source.ID <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://debond.org/" target="_blank">D/Bond <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./dwallet.html" target="_blank">D/Wallet <span x-show="arrow">↗</span></a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <!-- <a href="./company.html"><div class="group flex flex-col items-center mr-6">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">Company</div>
+                </div></a> -->
+                <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">
+                        <a href="./company.html">Company</a>
+                    </div>
+                    <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
+                        <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./team.html">Team <span x-show="arrow">↗</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">
+                        <a href="./developers.html">Developers</a>
+                    </div>
+                    <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
+                        <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://docs.desmolabs.org">Documentation <span x-show="arrow">↗</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group flex flex-col items-center mr-6">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800">
+                        <a href="./pricing.html" target="_blank">Pricing</a>
+                    </div>
+                </div>
+                <!-- <a href="./company.html"><div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">Company</div>
+                    <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
+                        <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
+                            <li class="border-b border-gray-500 py-3"><a href="#">About D/Labs</a></li>
+                            <li class="border-b border-gray-500 py-3"><a href="#">Whitepaper</a></li>
+                            <li class="border-b border-gray-500 py-3"><a href="#">Partners</a></li>
+                            <li class="py-3"><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                </div></a>
+                <a href="./developers.html"><div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">Developers</div>
+                    <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
+                        <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
+                            <li class="border-b border-gray-500 py-3"><a href="#">Documentation</a></li>
+                            <li class="border-b border-gray-500 py-3"><a href="#">Developer Portal</a></li>
+                            <li class="border-b border-gray-500 py-3"><a href="#">Launch our app</a></li>
+                            <li class="py-3"><a href="#">Cases Study</a></li>
+                        </ul>
+                    </div>
+                </div></a>
+                <a href="./team.html"><div class="group flex flex-col items-center mr-6" x-data="{ open: false }" @mouseleave="open = false">
+                    <div class="text-gray-300 cursor-pointer py-3 border-b-4 border-transparent group-hover:border-blue-800" @mouseover="open = true">Team</div>
+                    <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
+                        <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
+                            <li class="border-b border-gray-500 py-3"><a href="#">Our Vision</a></li>
+                            <li class="border-b border-gray-500 py-3"><a href="#">Our Team</a></li>
+                            <li class="border-b border-gray-500 py-3"><a href="#">Our Story</a></li>
+                            <li class="py-3"><a href="#">Join Us</a></li>
+                        </ul>
+                    </div>
+                </div></a> -->
+                <div class="my-3 px-4 py-1 text-white border border-white rounded hover:bg-blue-500 hover:border-blue-500"><a href="https://app.debond.org" target="_blank">Launch APP</a></div>
+                <!-- <a href="#contact"><div class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Contact us</div></a> -->
+
+            </div>
+            <div class="lg:hidden">
+                <svg class="" x-show="! open" @click="open = true" width="26" height="26" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.94971 11.9497H39.9497" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.94971 23.9497H39.9497" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.94971 35.9497H39.9497" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg x-show="open" @click="open = false" width="26" height="26" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 14L34 34" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 34L34 14" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+        </header>
+        <div class="lg:hidden w-full px-8 pb-16 flex-col items-center text-lg absolute z-10 bg-black" x-show="open">
+            <div class="flex flex-col items-start border-b border-gray-500" x-data="{ ulOpen: false }">
+                <div class="w-full flex flex-row items-center justify-between" @click="ulOpen = !ulOpen">
+                    <div class="text-gray-300 cursor-pointer py-3"><a href="./index.html#solution">Solutions</div>
+                    <div :class="{ 'rotate-180': !ulOpen }" class="w-4 h-4">
+                        <svg width="100%" height="100%" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 10.5554L9.18888 1L17.3875 10.5554" stroke="#fff" stroke-miterlimit="10"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div x-show="ulOpen" class="w-full mb-4">
+                    <ul class="ml-4 grid grid-cols-1 text-white">
+                        <li class="text-base py-2"><a href="#">Source.ID ↗</a></li>
+                        <li class="text-base py-2"><a href="#">Debond</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="flex flex-col items-start border-b border-gray-500">
+                <div class="w-full flex flex-row items-center justify-between">
+                    <div class="text-gray-300 cursor-pointer py-3"><a href="./company.html">Company</a></div>
+                </div>
+            </div> -->
+            <div class="flex flex-col items-start border-b border-gray-500" x-data="{ ulOpen: false }">
+                <div class="w-full flex flex-row items-center justify-between" @click="ulOpen = !ulOpen">
+                    <div class="text-gray-300 cursor-pointer py-3">
+                        <a href="./company.html">Company</a>
+                    </div>
+                    <div :class="{ 'rotate-180': !ulOpen }" class="w-4 h-4">
+                        <svg width="100%" height="100%" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 10.5554L9.18888 1L17.3875 10.5554" stroke="#fff" stroke-miterlimit="10"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div x-show="ulOpen" class="w-full mb-4">
+                    <ul class="ml-4 grid grid-cols-1 text-white">
+                        <li class="py-3"><a href="./press.html">Press ↗</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col items-start border-b border-gray-500">
+                <div class="w-full flex flex-row items-center justify-between">
+                    <div class="text-gray-300 cursor-pointer py-3"><a href="./developers.html">Developers</a></div>
+                </div>
+            </div>
+            <div class="flex flex-col items-start border-b border-gray-500">
+                <div class="w-full flex flex-row items-center justify-between">
+                    <div class="text-gray-300 cursor-pointer py-3"><a href="./team.html">Team</a></div>
+                </div>
+            </div>
+            <!-- <div class="flex flex-col items-start border-b border-gray-500" x-data="{ ulOpen: false }">
+                <div class="w-full flex flex-row items-center justify-between" @click="ulOpen = !ulOpen">
+                    <div class="text-gray-300 cursor-pointer py-3"><a href="./company.html">Company</a></div>
+                    <div :class="{ 'rotate-180': !ulOpen }" class="w-4 h-4">
+                        <svg width="100%" height="100%" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 10.5554L9.18888 1L17.3875 10.5554" stroke="#fff" stroke-miterlimit="10"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div x-show="ulOpen"  class="w-full mb-4">
+                    <ul class="ml-4 grid grid-cols-1 text-white">
+                        <li class="text-base py-2"><a href="#">About D/Labs</a></li>
+                        <li class="text-base py-2"><a href="#">Whitepaper</a></li>
+                        <li class="text-base py-2"><a href="#">Partners</a></li>
+                        <li class="text-base py-2"><a href="#">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col items-start border-b border-gray-500" x-data="{ ulOpen: false }">
+                <div class="w-full flex flex-row items-center justify-between" @click="ulOpen = !ulOpen">
+                    <div class="text-gray-300 cursor-pointer py-3"><a href="./developers.html">Developers</a></div>
+                    <div :class="{ 'rotate-180': !ulOpen }" class="w-4 h-4">
+                        <svg width="100%" height="100%" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 10.5554L9.18888 1L17.3875 10.5554" stroke="#fff" stroke-miterlimit="10"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div x-show="ulOpen"  class="w-full mb-4">
+                    <ul class="ml-4 grid grid-cols-1 text-white">
+                        <li class="text-base py-2"><a href="#">Documentation</a></li>
+                        <li class="text-base py-2"><a href="#">Developer Portal</a></li>
+                        <li class="text-base py-2"><a href="#">Launch our app</a></li>
+                        <li class="text-base py-2"><a href="#">Cases Study</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col items-start border-b border-gray-500" x-data="{ ulOpen: false }">
+                <div class="w-full flex flex-row items-center justify-between" @click="ulOpen = !ulOpen">
+                    <div class="text-gray-300 cursor-pointer py-3"><a href="./team.html">Team</a></div>
+                    <div :class="{ 'rotate-180': !ulOpen }" class="w-4 h-4">
+                        <svg width="100%" height="100%" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 10.5554L9.18888 1L17.3875 10.5554" stroke="#fff" stroke-miterlimit="10"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div x-show="ulOpen"  class="w-full mb-4">
+                    <ul class="ml-4 grid grid-cols-1 text-white">
+                        <li class="text-base py-2"><a href="#">Our Vision</a></li>
+                        <li class="text-base py-2"><a href="#">Our Team</a></li>
+                        <li class="text-base py-2"><a href="#">Our Story</a></li>
+                        <li class="text-base py-2"><a href="#">Join Us</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            
+            <a href="https://app.debond.org" @click="open = false;"><div class="px-4 mt-8 py-1 text-white text-base text-center border border-white rounded">Launch App</div></a>
+        </div>
+    </div>
+    <div id="cookies-notice" x-data="{ open: true }"
+    x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
+    <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
+        <div class="flex flex-row items-center justify-between mx-4">
+            <div class="flex flex-col">
+                <p>
+                    <strong>Notice.</strong>
+                    We uses cookies to provide necessary website functionality, improve your experience
+                    and analyze our traffic. By using our website, you agree to our legal policies:
+                    <a href="./legal/privacy-policy.html?from=company.html" title="Privacy Policy">Privacy
+                        Policy</a>,
+                    <a href="./legal/cookies-policy.html?from=company.html" title="Cookies Policy">Cookies
+                        Policy</a>
+                </p>
+            </div>
+            <div class="flex flex-col items-center justify-between">
+                <span class="cursor-pointer flex" id="cookie-notice-accept" @click="open = false"
+                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
+                    <span
+                        class="text-white border border-black rounded px-5 py-2 md:py-1 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">Accept</span>
+                </span>
+                <span class="cursor-pointer flex mt-2 md:hidden" id="cookie-notice-decline-sm" @click="open = false"
+                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                    <span
+                        class="text-white border border-black rounded px-4 py-2 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                </span>
+            </div>
+            <div class="flex flex-col hidden md:flex">
+                <span class="cursor-pointer flex ml-2" id="cookie-notice-decline" @click="open = false"
+                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                    <span
+                        class="text-white border border-black rounded px-4 py-1 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="lg:hidden w-full p-8 pb-16 flex-col items-center text-lg absolute z-10 bg-black" x-show="open" @click="open = false">
+        <a href="#solution"><div class="text-gray-300 mb-4">Solutions</div></a>
+        <a href="#company"><div class="text-gray-300 mb-4">Company</div></a>
+        <a href="#developers"><div class="text-gray-300 mb-4">Developers</div></a>
+        <a href="#team"><div class="text-gray-300 mb-4">Team</div></a>
+        <a href="#contact"><div class="px-4 py-1 text-white text-base text-center border border-white rounded">Contact us</div></a>
+    </div>
+    <div class="bg-cover bg-top" style="background-image: url('./developers/images/bg.png');">
+        <div class="lg:max-w-screen-lg mx-auto py-16 lg:pt-32 lg:pb-48">
+            <div class="mx-8 lg:mx-0">
+                <div class="text-blue-400 mb-4 text-lg font-semibold">Pricing:</div>
+                <div class="lg:leading-tight text-2xl lg:text-6xl font-extrabold">Nearly 80% of your costs could be saved by Desmo Labs’ Solutions</div>
+            </div>
+        </div>
+    </div>
+    <div class="lg:max-w-screen-lg mx-auto py-12 lg:pb-24 flex flex-col lg:flex-row items-center">
+        <img class="w-2/3 lg:w-5/12 mb-6 lg:mb-0" src="./pricing/images/tier.png" />
+        <div class="flex-1 flex items-center lg:justify-end lg:ml-20">
+            <div class="flex flex-col lg:block lg:mr-4 mx-8 lg:mx-0">
+                <div class="text-white font-extrabold text-3xl lg:text-5xl text-center lg:text-left">COST-EFFICIENT<span class="text-blue-500">.</span></div>
+                <div class="text-white my-8 font-extralight">
+                    An average financial service provider typically allocates around 26% of its annual expenditures to its KYC, legal, notary, and compliance teams.<br>
+With Desmo Labs‘ streamlined KYC onboarding and OTC trading process, the cost of such processes can be reduced by more than 80%.
+                </div>
+                <a href="https://desmolabs.gitbook.io/desmo-labs-documentation/desmo-labs-documentation/docs-navigation" target="_blank"><span class="bg-blue-500 text-white text-center px-12 py-3 rounded font-bold text-sm">BOOK A CONSULTATION</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="lg:max-w-screen-lg mx-auto mb-20">
+        <div class="py-6 font-extrabold text-center lg:text-left text-lg lg:text-2xl">Adopt Desmo Labs’ Solutions to optimize your services :</div>
+        <table class="table-auto w-full text-center">
+            <thead class="bg-gray-700">
+                <tr class="">
+                    <th class="py-6 font-bold"></th>
+                    <th class="py-6 font-bold">Annual Costs without Desmo Labs</th>
+                    <th class="py-6 font-bold">Annual Costs with Desmo Labs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td class="py-4 font-bold">Marketplace and Solution Development</td>
+                    <td class="py-4">$60k - $600k</td>
+                    <td class="py-4">$6k - $25k</td>
+                </tr>
+                <tr class=" bg-gray-700">
+                    <td class="py-4 font-bold">KYC and Compliance Onboarding</td>
+                    <td class="py-4">$15k - $100k</td>
+                    <td class="py-4">Free</td>
+                </tr>
+                <tr class="">
+                    <td class="py-4 font-bold">Custody and Settlement</td>
+                    <td class="py-4">$20k - $150k</td>
+                    <td class="py-4">Free</td>
+                </tr>
+                <tr class=" bg-gray-700">
+                    <td class="py-4 font-bold">Legal and Notary Fee</td>
+                    <td class="py-4">$35k - $350k</td>
+                    <td class="py-4">Free</td>
+                </tr>
+                <tr class="">
+                    <td class="py-4 font-bold">Listing and OTC market</td>
+                    <td class="py-4">$50k - $500k</td>
+                    <td class="py-4">Free</td>
+                </tr>
+                <tr class=" bg-gray-700">
+                    <td class="py-4 font-bold">OTC Customer Acquisition Cost</td>
+                    <td class="py-4">$13k+</td>
+                    <td class="py-4">Free</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="py-4 text-center lg:text-left text-sm text-gray-500 italic">Statistics based on customer interviews with a small to medium-sized financial service provider (80-120 MAU)</div>
+    </div>
+    <div id="contact" class="lg:max-w-screen-lg mx-auto py-8 lg:py-16">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+            <div class="text-white grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-16 items-center">
+                <div class="">
+                    <div class="font-bold mb-5 ">Solutions</div>
+                    <div class="text-base lg:text-sm font-extralight">
+                        <div class="mb-1"><a href="https://source.id" target="_blank">Source.ID</a></div>
+                        <div class="mb-1"><a href="https://debond.org" target="_blank">Debond</a></div>
+                        
+                    </div>
+                </div>
+                <div class="">
+                    <div class="font-bold mb-5">Company</div>
+                    <div class="text-base lg:text-sm font-extralight">
+                        <div class="mb-1"><a href="https://desmolabs.org/company.html">Who we are</a></div>
+                        <div class="mb-1"><a href="https://desmolabs.org/company.html">About D/Labs</a></div>
+                        
+                    </div>
+                </div>
+                <div class="">
+                    <div class="font-bold mb-5 ">Developers</div>
+                    <div class="text-base lg:text-sm font-extralight">
+                        <div class="mb-1"><a href="https://desmolabs.org/developers.html#communities">Communities</a></div>
+                        <div><a href="https://desmolabs.gitbook.io/desmo-labs-documentation/desmo-labs-documentation/docs-navigation" target="_blank">Documentation</a></div>
+
+                    </div>
+                </div>
+                <div class="">
+                    <div class="font-bold mb-5 ">Team</div>
+                    <div class="text-base lg:text-sm font-extralight">
+                        <div class="mb-1"><a href="https://desmolabs.org/team.html#vision">Our Vision</a></div>
+                        <div class="mb-1"><a href="https://desmolabs.org/team.html">Our Team</a></div>
+                      
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center mt-12 lg:mt-0">
+                <div class="text-white font-bold mb-5 tex-center">Keep in touch</div>
+                <div class="flex flex-row items-center">
+                    <a href="https://twitter.com/DebondProtocol"><img class="mx-2" src="./desmolabs/images/TWITTER.svg" /></a>
+                    <a href="https://github.com/DeBond-Protocol"><img class="mx-2" src="./desmolabs/images/GITHUB.svg" /></a>
+                    <a href="#contact"><img class="mx-2" src="./desmolabs/images/REDDIT.svg" /></a>
+                    <a href="https://discord.gg/HUDSX4Agjq"><img class="mx-2" src="./desmolabs/images/DISCORD.svg" /></a>
+                    <a href="https://debond-protocol.medium.com/"><img class="mx-2" src="./desmolabs/images/MEDIUM.svg" /></a>
+                    <a href="https://debond.org/#"><img class="mx-2" src="./desmolabs/images/YOUTUBE.svg" /></a>
+                    <a href="https://t.me/debond_protocol"><img class="mx-2" src="./desmolabs/images/TELEGRAM.svg" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-white font-extralight text-xs mt-20 flex flex-col gap-2">
+            ©Desmo Labs 2023 All Rights Reserved
+            <a href="/legal/privacy-policy.html"><div class="underline">Privacy policies and terms</div></a>
+        </div>
+    </div>
+</body>
+</html>
