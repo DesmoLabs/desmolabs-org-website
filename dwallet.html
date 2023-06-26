@@ -230,44 +230,44 @@
 
     <!-- cookies -->
     <div id="cookies-notice" x-data="{ open: true }"
-    x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
-    <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
-        <div class="flex flex-row items-center justify-between mx-4">
-            <div class="flex flex-col">
-                <p>
-                    <strong>Notice.</strong>
-                    We uses cookies to provide necessary website functionality, improve your experience
-                    and analyze our traffic. By using our website, you agree to our legal policies:
-                    <a href="./legal/privacy-policy.html?from=company.html" title="Privacy Policy">Privacy
-                        Policy</a>,
-                    <a href="./legal/cookies-policy.html?from=company.html" title="Cookies Policy">Cookies
-                        Policy</a>
-                </p>
-            </div>
-            <div class="flex flex-col items-center justify-between">
-                <span class="cursor-pointer flex" id="cookie-notice-accept" @click="open = false"
-                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
-                    <span
-                        class="text-white border border-black rounded px-5 py-2 md:py-1 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">Accept</span>
-                </span>
-                <span class="cursor-pointer flex mt-2 md:hidden" id="cookie-notice-decline-sm" @click="open = false"
-                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
-                    <span
-                        class="text-white border border-black rounded px-4 py-2 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
-                </span>
-            </div>
-            <div class="flex flex-col hidden md:flex">
-                <span class="cursor-pointer flex ml-2" id="cookie-notice-decline" @click="open = false"
-                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
-                    <span
-                        class="text-white border border-black rounded px-4 py-1 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
-                </span>
+        x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
+        <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
+            <div class="flex flex-row items-center justify-between mx-4">
+                <div class="flex flex-col">
+                    <p>
+                        <strong>Notice.</strong>
+                        We uses cookies to provide necessary website functionality, improve your experience
+                        and analyze our traffic. By using our website, you agree to our legal policies:
+                        <a href="./legal/privacy-policy.html?from=company.html" title="Privacy Policy">Privacy
+                            Policy</a>,
+                        <a href="./legal/cookies-policy.html?from=company.html" title="Cookies Policy">Cookies
+                            Policy</a>
+                    </p>
+                </div>
+                <div class="flex flex-col items-center justify-between">
+                    <span class="cursor-pointer flex" id="cookie-notice-accept" @click="open = false"
+                        onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
+                        <span
+                            class="text-white border border-black rounded px-5 py-2 md:py-1 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">Accept</span>
+                    </span>
+                    <span class="cursor-pointer flex mt-2 md:hidden" id="cookie-notice-decline-sm" @click="open = false"
+                        onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                        <span
+                            class="text-white border border-black rounded px-4 py-2 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                    </span>
+                </div>
+                <div class="flex flex-col hidden md:flex">
+                    <span class="cursor-pointer flex ml-2" id="cookie-notice-decline" @click="open = false"
+                        onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                        <span
+                            class="text-white border border-black rounded px-4 py-1 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
-</div>
-    <div class="bg-center lg:py-24 bg-no-repeat bg-cover" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./wall/1.png');">
-        <div class="py-12 lg:py-24 lg:max-w-screen-lg mx-auto relative">
+    <div class="bg-right-top lg:py-6 bg-no-repeat bg-auto" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./wall/bg.png');">
+        <div class="py-10 lg:py-6 lg:max-w-screen-lg mx-auto relative flex flex-row items-center justify-between">
             <div class="px-6 lg:px-0 lg:w-1/2 flex flex-col items-center lg:items-start">
                 <div class="text-3xl lg:text-6xl text-white font-extrabold">USER-END COMPLIANT APPLICATION
 
@@ -288,6 +288,86 @@
                 <sup>*</sup><i>supported browsers</i>
                 </div>  -->
 
+            </div>
+            <div
+                class="w-full sm:w-5/12 relative overflow-x-hidden"
+                x-data="{ activeSlide: 1 , lunbos: [
+                { img: './wall/s1.png' },
+                { img: './wall/s2.png' },
+                { img: './wall/s3.png' },
+            ],last : null}"
+                x-init="last=activeSlide;$next=$refs.next;$flag=setInterval('$next.click()',3000);"
+                @resetting="clearInterval($flag);$flag=setInterval('$next.click()',3000);"
+                >
+                <!--循环输出图片-->
+                <div
+                    class="relative min-w-full flex"
+                    :class="{'transition-transform':last!=activeSlide}"
+                    :style="`transform: translateX(${(activeSlide) * -100}%)`"
+                    @transitionend="if(activeSlide>lunbos.length){activeSlide=1;}if(activeSlide<1){activeSlide=lunbos.length;}"
+                    x-effect="if(activeSlide==0){last=lunbos.length}if(activeSlide==lunbos.length+1){last=1}if(1<activeSlide&&activeSlide<lunbos.length){last=-1}"
+                >
+                    <!--
+            当播放序号activeSlide为0时将last变量定义为数组长度3，然后activeSlide变为3，此时activeSlide与last相等故不显示切换动画
+            当播放序号activeSlide为4时将last变量定义为数组长度1，然后activeSlide变为1，此时activeSlide与last相等故不显示切换动画
+            activeSlide在大于1小于数组长度3时，将last设置为-1，此时显示切换动画
+            -->
+                    <template
+                    x-for="(lunbo,index) in [lunbos[lunbos.length -1], ...lunbos, lunbos[0]]"
+                    :key="index"
+                    >
+                    <img
+                        class="flex-shrink-0 w-full object-center object-contain"
+                        :src="lunbo.img"
+                    />
+                    </template>
+                </div>
+
+                <div
+                    class="hidden absolute top-0 bottom-0 text-white flex justify-between w-full"
+                >
+                    <!--上一个-->
+                    <button
+                    class="hover:text-sky-500 px-2"
+                    @click="activeSlide = activeSlide === 0 ? lunbos.length+1 : activeSlide - 1;$dispatch('resetting')"
+                    >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-8 w-8"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M11 17l-5-5m0 0l5-5m-5 5h12"
+                        ></path>
+                    </svg>
+                    </button>
+                    <!--下一个-->
+                    <button
+                    class="hover:text-sky-500 px-2"
+                    @click="activeSlide = activeSlide === lunbos.length+1 ? 1 : activeSlide + 1;$dispatch('resetting')"
+                    x-ref="next"
+                    >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-8 w-8"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        ></path>
+                    </svg>
+                    </button>
+                </div>
             </div>
             <!-- <img class="w-16 lg:w-32 right-10 top-10 absolute" src="./desmolabs/images/moon.svg" > -->
         </div>
