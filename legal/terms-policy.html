@@ -79,7 +79,8 @@
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
                             <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
-                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./team.html">Team <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./team.html">Team <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./technologies.html">Technologies <span x-show="arrow">↗</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -207,7 +208,7 @@
         </div>
     </div>
     <div id="cookies-notice" x-data="{ open: true }" x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
-        <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
+        <div class="wrapper fixed z-10 bottom-0 py-2 left-1/2 -translate-x-1/2 w-full lg:w-3/5 bg-black text-white border-t border-x" x-show="open">
             <div class="flex flex-row items-center justify-between mx-4">
                 <div class="flex flex-col">
                     <p>

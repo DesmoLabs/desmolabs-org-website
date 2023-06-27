@@ -8,6 +8,7 @@
     <title>[D/Wallet]</title>
     <link rel="icon" href="./sourceid/images/S.svg">
     <!-- <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
     <script>
@@ -60,7 +61,8 @@
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
                             <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
-                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./team.html">Team <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./team.html">Team <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./technologies.html">Technologies <span x-show="arrow">↗</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -137,7 +139,7 @@
             <div x-show="ulOpen" class="w-full mb-4">
                 <ul class="ml-4 grid grid-cols-1 text-white">
                     <li class="text-base py-2"><a href="#">Source.ID ↗</a></li>
-                    <li class="text-base py-2"><a href="#">Debond</a></li>
+                    <li class="text-base py-2"><a href="#">Debond ↗</a></li>
                   
                 </ul>
             </div>
@@ -159,6 +161,8 @@
             <div x-show="ulOpen" class="w-full mb-4">
                 <ul class="ml-4 grid grid-cols-1 text-white">
                     <li class="text-base py-2"><a href="./press.html">Press</a></li>
+                    <li class="text-base py-2"><a href="./team.html">Team</a></li>
+                    <li class="text-base py-2"><a href="./technologies.html">Technologies</a></li>
                 </ul>
             </div>
         </div>
@@ -169,7 +173,7 @@
         </div>
         <div class="flex flex-col items-start border-b border-gray-500">
             <div class="w-full flex flex-row items-center justify-between">
-                <div class="text-gray-300 cursor-pointer py-3"><a href="./team.html">Team</a></div>
+                <div class="text-gray-300 cursor-pointer py-3"><a href="./pricing.html">Pricing</a></div>
             </div>
         </div>
         <!-- <div class="flex flex-col items-start border-b border-gray-500" x-data="{ ulOpen: false }">
@@ -210,7 +214,7 @@
         </div>
         <div class="flex flex-col items-start border-b border-gray-500" x-data="{ ulOpen: false }">
             <div class="w-full flex flex-row items-center justify-between" @click="ulOpen = !ulOpen">
-                <div class="text-gray-300 cursor-pointer py-3"><a href="./team.html">Team</a></div>
+                <div class="text-gray-300 cursor-pointer py-3"><a href="./pricing.html">Pricing</a></div>
                 <div :class="{ 'rotate-180': !ulOpen }" class="w-4 h-4">
                     <svg width="100%" height="100%" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10.5554L9.18888 1L17.3875 10.5554" stroke="#fff" stroke-miterlimit="10"></path>
@@ -232,7 +236,7 @@
     <!-- cookies -->
     <div id="cookies-notice" x-data="{ open: true }"
         x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
-        <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
+        <div class="wrapper fixed z-10 bottom-0 py-2 left-1/2 -translate-x-1/2 w-full lg:w-3/5 bg-black text-white border-t border-x" x-show="open">
             <div class="flex flex-row items-center justify-between mx-4">
                 <div class="flex flex-col">
                     <p>
@@ -267,8 +271,8 @@
             </div>
         </div>
     </div>
-    <div class="bg-right-top lg:py-6 bg-no-repeat bg-auto" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./wall/bg.png');">
-        <div class="py-10 lg:py-6 lg:max-w-screen-lg mx-auto relative flex flex-row items-center justify-between">
+    <div class="bg-right-top lg:py-6 bg-no-repeat bg-contain lg:bg-auto" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./wall/bg.png');">
+        <div class="py-10 lg:py-6 lg:max-w-screen-lg mx-auto relative flex flex-col-reverse lg:flex-row items-center justify-between">
             <div class="px-6 lg:px-0 lg:w-1/2 flex flex-col items-center lg:items-start">
                 <div class="text-3xl lg:text-6xl text-white font-black">USER-END COMPLIANT APPLICATION
 
@@ -443,7 +447,7 @@
     <div class="bg-center lg:py-24 bg-no-repeat bg-cover" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('./wall/5.jpg');">
         <div class="py-12 lg:py-24 lg:max-w-screen-lg mx-auto relative lg:pt-10">
             <div class="px-6 lg:px-0 flex flex-col items-center text-center">
-                <div class="text-3xl lg:text-4xl font-extrabold text-center lg:pb-24 text-black">Install [D/Wallet] for your browser</div>
+                <div class="text-3xl lg:text-4xl font-extrabold text-center pb-12 lg:pb-24 text-black">Install [D/Wallet] for your browser</div>
                 <a href="#solution"><span class="bg-blue-202 text-base lg:text-lg text-white px-20 py-3 lg:py-4 rounded text-center">Get started</span></a>
             </div>
             <!-- <img class="w-16 lg:w-32 right-10 top-10 absolute" src="./desmolabs/images/moon.svg" > -->
@@ -536,7 +540,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center text-white font-extralight text-xs mt-20 flex flex-col gap-2">
+        <div class="text-center text-white font-extralight text-xs mt-20 flex flex-col items-center gap-2">
             <div class="flex flex-row items-center gap-3">
                 <a href="/legal/terms-policy.html"><div class="underline">Terms of Services</div></a>
                 <div>|</div>

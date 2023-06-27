@@ -58,7 +58,8 @@
                     <div class="absolute top-3/4 z-10" x-show="open" @mouseover="open = true" @mouseleave="open = false">
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
                             <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./press.html">Press <span x-show="arrow">↗</span></a></li>
-                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./team.html">Team <span x-show="arrow">↗</span></a></li>
+                            <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./team.html">Team <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./technologies.html">Technologies <span x-show="arrow">↗</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -155,7 +156,9 @@
                 </div>
                 <div x-show="ulOpen" class="w-full mb-4">
                     <ul class="ml-4 grid grid-cols-1 text-white">
-                        <li class="py-3"><a href="./press.html">Press ↗</a></li>
+                        <li class="text-base py-2"><a href="./press.html">Press</a></li>
+                    <li class="text-base py-2"><a href="./team.html">Team</a></li>
+                    <li class="text-base py-2"><a href="./technologies.html">Technologies</a></li>
                     </ul>
                 </div>
             </div>
@@ -166,7 +169,7 @@
             </div>
             <div class="flex flex-col items-start border-b border-gray-500">
                 <div class="w-full flex flex-row items-center justify-between">
-                    <a href="./team.html"><div class="text-gray-300 cursor-pointer py-3">Team</div></a>
+                    <a href="./pricing.html"><div class="text-gray-300 cursor-pointer py-3">Pricing</div></a>
                 </div>
             </div>
             <!-- <div class="flex flex-col items-start border-b border-gray-500" x-data="{ ulOpen: false }">
@@ -228,7 +231,7 @@
 
     <!-- cookies pop up -->
     <div id="cookies-notice" x-data="{ open: true }" x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
-        <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
+        <div class="wrapper fixed z-10 bottom-0 py-2 left-1/2 -translate-x-1/2 w-full lg:w-3/5 bg-black text-white border-t border-x" x-show="open">
             <div class="flex flex-row items-center justify-between mx-4">
                 <div class="flex flex-col">
                     <p>
@@ -286,7 +289,7 @@
                 <div class="mx-auto max-w-7xl px-6 lg:px-8">
                   <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
                     <div class="max-w-xl lg:max-w-lg">
-                      <h2 class="text-3xl font-medium tracking-widest text-white sm:text-4xl"><a href="dwallet.html" target="_blank">[D/Wallet]</a></h2>
+                      <h2 class="text-3xl font-bold text-white sm:text-4xl"><a href="dwallet.html" target="_blank">[D/Wallet]</a></h2>
                       <p class="mt-4 text-lg leading-8 text-gray-300">Manage your digital identity, personal data, and assets, benefitting from a streamlined experience.</p>
                     </div>
                   </div>
@@ -455,7 +458,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center text-white font-extralight text-xs mt-20 flex flex-col gap-2">
+            <div class="text-center text-white font-extralight text-xs mt-20 flex flex-col items-center gap-2">
             <div class="flex flex-row items-center gap-3">
                 <a href="/legal/terms-policy.html"><div class="underline">Terms of Services</div></a>
                 <div>|</div>

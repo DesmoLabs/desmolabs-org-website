@@ -230,7 +230,7 @@
     </div>
     <div id="cookies-notice" x-data="{ open: true }"
         x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
-        <div class="wrapper fixed z-10 bottom-0 py-2 bg-black text-white border" x-show="open">
+        <div class="wrapper fixed z-10 bottom-0 py-2 left-1/2 -translate-x-1/2 w-full lg:w-3/5 bg-black text-white border-t border-x" x-show="open">
             <div class="flex flex-row items-center justify-between mx-4">
                 <div class="flex flex-col">
                     <p>
@@ -1124,7 +1124,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center text-white font-extralight text-xs mt-20 flex flex-col gap-2">
+        <div class="text-center text-white font-extralight text-xs mt-20 flex flex-col items-center gap-2">
             ©Desmo Labs 2023 All Rights Reserved
             <a href="/legal/privacy-policy.html">
                 <div class="underline">Privacy policies and terms</div>
