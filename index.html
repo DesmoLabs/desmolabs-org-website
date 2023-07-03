@@ -43,7 +43,7 @@
                         <ul class=" bg-gray-800 text-white w-48 px-8 py-4 rounded-md">
                             <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://source.id/" target="_blank">Source.ID <span x-show="arrow">↗</span></a></li>
                             <li class="border-b border-gray-500 py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="https://debond.org/" target="_blank">D/Bond <span x-show="arrow">↗</span></a></li>
-                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="./dwallet.html" target="_blank">D/Wallet <span x-show="arrow">↗</span></a></li>
+                            <li class="py-3" x-data="{ arrow: false }" @mouseover="arrow = true" @mouseleave="arrow = false"><a href="/dwallet.html" target="_blank">D/Wallet <span x-show="arrow">↗</span></a></li>
                         
                         </ul>
                     </div>
@@ -133,8 +133,8 @@
                 <div x-show="ulOpen" class="w-full mb-4">
                     <ul class="ml-4 grid grid-cols-1 text-white">
                         <li class="text-base py-2"><a href="https://source.id/" target="_blank">Source.ID ↗</a></li>
-                        <li class="text-base py-2"><a href="https://debond.org/" target="_blank">Debond ↗</a></li>
-                      
+                        <li class="text-base py-2"><a href="https://debond.org/" target="_blank">D/Bond ↗</a></li>
+                        <li class="text-base py-2"><a href="/dwallet.html" target="_blank">D/Wallet ↗</a></li>
                     </ul>
                 </div>
             </div>
@@ -270,15 +270,15 @@
     </div>
     <div class="bg-black py-12 lg:py-20">
         <div class="lg:max-w-screen-lg mx-auto px-6 lg:px-0">
-            <div class="text-white text-2xl font-extrabold mb-8 text-center lg:text-left">Trusted by</div>
+            <div class="text-white text-2xl font-extrabold mb-8 text-center lg:text-left">Highlight In</div>
             <div class="grid grid-cols-3 lg:grid-cols-6 gap-8 w-full">
-                <img class="h-7 mx-auto" src="./desmolabs/images/tb-eth.png" />
-                <img class="h-6 mx-auto" src="./desmolabs/images/tb-nasdaq.svg" />
-                <img class="h-6 mx-auto" src="./desmolabs/images/tb-a55.png" />
-                <img class="h-6 mx-auto" src="./desmolabs/images/tb-ebsi.png" />
-                <img class="h-6 mx-auto" src="./desmolabs/images/tb-equisafe.png" />
-                <img class="h-6 mx-auto" src="./desmolabs/images/tb-forbes.svg" />
-               
+                <img class="h-10 mx-auto" src="./desmolabs/images/tb-eth.png" />
+                <img class="h-10 mx-auto" src="./desmolabs/images/cointelegraph.png" />
+                <img class="h-10 mx-auto" src="./desmolabs/images/entrepreneur.png" />
+                <img class="h-10 mx-auto" src="./desmolabs/images/ebsi.png" />
+                <img class="h-10 mx-auto" src="./desmolabs/images/forbes.png" />
+                <!-- <img class="h-10 mx-auto" src="./desmolabs/images/tb-equisafe.png" /> -->
+                <img class="h-10 mx-auto" src="./desmolabs/images/yahoo.png" />
             </div>
         </div>
 
@@ -348,7 +348,9 @@
                             <li>Smooth onboarding and legal processes significantly reduce drop rates.</li>
                         </ul>
                         <div class="mt-10">
-                            <span class="text-white border border-white rounded px-8 py-2 text-lg text-center">Learn more</span>
+                            <a href="https://docs.desmolabs.org/desmo-labs-documentation/docs-navigation" target="_blank">
+                                <span class="text-white border border-white rounded px-8 py-2 text-lg text-center">Learn more</span>
+                            </a>
                         </div>
                       </div>
                     </div>
@@ -374,7 +376,9 @@
                                 </ul>
                             </p>
                             <div class="mt-10">
-                                <span class="text-white border border-white rounded px-8 py-2 text-lg text-center">Learn more</span>
+                                <a href="https://docs.desmolabs.org/desmo-labs-documentation/docs-navigation" target="_blank">
+                                    <span class="text-white border border-white rounded px-8 py-2 text-lg text-center">Learn more</span>
+                                </a>
                             </div>
                         </div>
                       </div>
