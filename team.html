@@ -223,41 +223,41 @@
 
     <!-- cookies -->
     <div id="cookies-notice" x-data="{ open: true }"
-    x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
-    <div class="wrapper fixed z-10 bottom-0 py-2 left-1/2 -translate-x-1/2 w-full lg:w-3/5 bg-black text-white border-t border-x" x-show="open">
-        <div class="flex flex-row items-center justify-between mx-4">
-            <div class="flex flex-col">
-                <p>
-                    <strong>Notice.</strong>
-                    We use our own cookies on our website to enhance your experience, analyze our traffic, and for security and marketing purposes. For more information or to change your cookie settings, please refer to our Cookie Policy and visit the management settings. Please select "Accept All" to allow their use, or you can choose "Decline" to refuse all cookies, which may result in certain functionalities of the system being unavailable.
-                    <a href="./legal/privacy-policy.html?from=company.html" class="underline" title="Privacy Policy">Privacy
-                            Policy</a>,
-                        <a href="./legal/cookies-policy.html?from=company.html" class="underline" title="Cookies Policy">Cookies
-                            Policy</a>
-                </p>
-            </div>
-            <div class="flex flex-col items-center justify-between">
-                <span class="cursor-pointer flex" id="cookie-notice-accept" @click="open = false"
-                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
-                    <span
-                        class="text-white border border-black rounded px-5 py-2 md:py-1 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">Accept</span>
-                </span>
-                <span class="cursor-pointer flex mt-2 md:hidden" id="cookie-notice-decline-sm" @click="open = false"
-                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
-                    <span
-                        class="text-white border border-black rounded px-4 py-2 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
-                </span>
-            </div>
-            <div class="flex flex-col hidden md:flex">
-                <span class="cursor-pointer flex ml-2" id="cookie-notice-decline" @click="open = false"
-                    onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
-                    <span
-                        class="text-white border border-black rounded px-4 py-1 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
-                </span>
+        x-init="open = window.localStorage.getItem('is-cookies-policy-agreed')!='true'||window.localStorage.getItem('is-privacy-policy-agreed')!='true'">
+        <div class="wrapper fixed z-10 bottom-0 py-2 left-1/2 -translate-x-1/2 w-full lg:w-3/5 bg-black text-white border-t border-x" x-show="open">
+            <div class="flex flex-row items-center justify-between mx-4">
+                <div class="flex flex-col">
+                    <p>
+                        <strong>Notice.</strong>
+                        We use our own cookies on our website to enhance your experience, analyze our traffic, and for security and marketing purposes. For more information or to change your cookie settings, please refer to our Cookie Policy and visit the management settings. Please select "Accept All" to allow their use, or you can choose "Decline" to refuse all cookies, which may result in certain functionalities of the system being unavailable.
+                        <a href="./legal/privacy-policy.html?from=company.html" class="underline" title="Privacy Policy">Privacy
+                                Policy</a>,
+                            <a href="./legal/cookies-policy.html?from=company.html" class="underline" title="Cookies Policy">Cookies
+                                Policy</a>
+                    </p>
+                </div>
+                <div class="flex flex-col items-center justify-between">
+                    <span class="cursor-pointer flex" id="cookie-notice-accept" @click="open = false"
+                        onclick="window.localStorage.setItem('is-cookies-policy-agreed','true');window.localStorage.setItem('is-privacy-policy-agreed','true');">
+                        <span
+                            class="text-white border border-black rounded px-5 py-2 md:py-1 text-lg text-center hover:bg-blue-500 hover:border-blue-500 rounded">Accept</span>
+                    </span>
+                    <span class="cursor-pointer flex mt-2 md:hidden" id="cookie-notice-decline-sm" @click="open = false"
+                        onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                        <span
+                            class="text-white border border-black rounded px-4 py-2 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                    </span>
+                </div>
+                <div class="flex flex-col hidden md:flex">
+                    <span class="cursor-pointer flex ml-2" id="cookie-notice-decline" @click="open = false"
+                        onclick="window.localStorage.setItem('is-cookies-policy-agreed','false');window.localStorage.setItem('is-privacy-policy-agreed','false');">
+                        <span
+                            class="text-white border border-black rounded px-4 py-1 text-lg text-center hover:bg-red-500 hover:border-red-500 rounded">Decline</span>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
-</div>
     <div class="bg-cover bg-top" style="background-image: url('./team/images/bg.png');">
         <div class="lg:max-w-screen-lg mx-auto py-16 lg:pt-28 lg:pb-48">
             <div class="lg:w-3/4 mx-8 lg:mx-0">
@@ -304,6 +304,29 @@
                     </a>
                   </div>
                   
+            </div>
+        </div>
+    </div>
+    <div class="lg:max-w-screen-lg lg:mx-auto mx-8 py-12 lg:py-24">
+        <div class="font-bold text-lg lg:text-6xl mb-8 lg:mb-24">Team members</div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
+            <div class="p-8 lg:px-12 lg:py-16 rounded border border-gray-500 flex flex-col gap-2">
+                <div class="text-3xl lg:text-9xl font-semibold mb-6 lg:mb-10">8</div>
+                <div class="text-base lg:text-lg font-extrabold">Full-time</div>
+                <div class="text-base lg:text-lg ">& In-house</div>
+                <div class="text-base lg:text-lg ">Team Members</div>
+            </div>
+            <div class="p-8 lg:px-12 lg:py-16 rounded border border-gray-500 flex flex-col gap-2">
+                <div class="text-3xl lg:text-9xl font-semibold mb-6 lg:mb-10">8</div>
+                <div class="text-base lg:text-lg ">Graduates from</div>
+                <div class="text-base lg:text-lg font-extrabold">Top 100 QS-ranked</div>
+                <div class="text-base lg:text-lg ">Universities</div>
+            </div>
+            <div class="p-8 lg:px-12 lg:py-16 rounded border border-gray-500 flex flex-col gap-2">
+                <div class="text-3xl lg:text-9xl font-semibold mb-6 lg:mb-10">6</div>
+                <div class="text-base lg:text-lg font-extrabold">PhDs</div>
+                <div class="text-base lg:text-lg ">& PhD</div>
+                <div class="text-base lg:text-lg ">Candidates</div>
             </div>
         </div>
     </div>
